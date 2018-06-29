@@ -18,6 +18,7 @@
 *.zip
 *.tar.gz
 *.rar
+*.class
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -30,3 +31,26 @@ target/
 */.classpath
 .classpath
 */.settings
+
+
+sisvia-project/*/.project
+sisvia-project/*/.settings
+sisvia-project/*/.classpath
+
+sisvia-project/.project
+sisvia-project/.settings
+*/target/
+sisvia-project/.project
+sisvia-project/.project
+sisvia-project/.classpath
+sisvia-project/.classpath
+sisvia-project/.settings
+
+sisvia-project/sisvia-api/.project
+sisvia-project/sisvia-dao/.settings
+*/target/
+sisvia-project/sisvia-dominio/.project
+sisvia-project/.project
+sisvia-project/.classpath
+sisvia-project/.classpath
+sisvia-project/.settings
