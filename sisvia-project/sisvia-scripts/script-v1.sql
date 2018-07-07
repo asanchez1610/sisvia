@@ -102,17 +102,6 @@ CREATE TABLE tarjetaCorporativa (
 	CONSTRAINT TC_tarjetaCorporativa32 UNIQUE (viatico_ID)
 	);
 
-
-CREATE TABLE reglaActivada (
-	orden VARCHAR2 ( 255 ) NOT NULL,
-	reglaNegocio_ID NUMBER ( 10 ) NOT NULL,
-	viatico_ID NUMBER ( 10 ) NOT NULL,
-	CONSTRAINT PK_reglaActivada22 PRIMARY KEY (viatico_ID, reglaNegocio_ID)
-	);
-
-CREATE INDEX TC_reglaActivada72 ON reglaActivada (viatico_ID );
-CREATE INDEX TC_reglaActivada16 ON reglaActivada (reglaNegocio_ID );
-
 CREATE TABLE proveedor (
 	ruc VARCHAR2 ( 255 ) NOT NULL,
 	nomProveedor VARCHAR2 ( 255 ) NOT NULL,
@@ -216,14 +205,6 @@ CREATE INDEX TC_gastoTarjeta63 ON gastoTarjeta (tipoComprobante_ID );
 CREATE INDEX TC_gastoTarjeta64 ON gastoTarjeta (conceptoGasto_ID );
 CREATE INDEX TC_gastoTarjeta65 ON gastoTarjeta (proveedor_ID );
 
-CREATE TABLE reglaNegocio (
-	codRegla NUMBER ( 10 ) NOT NULL,
-	ordenEvaluacion VARCHAR2 ( 255 ) NOT NULL,
-	condicion VARCHAR2 ( 255 ) NOT NULL,
-	conclusion NUMBER ( 5 ) NOT NULL,
-	reglaNegocio_ID NUMBER ( 10 ) NOT NULL,
-	CONSTRAINT PK_reglaNegocio19 PRIMARY KEY (reglaNegocio_ID)
-	);
 ALTER TABLE viatico ADD ( CONSTRAINT FK_viatico11 FOREIGN KEY (solicitudViaticos_ID) REFERENCES solicitudViaticos (solicitudViaticos_ID));
 ALTER TABLE viatico ADD ( CONSTRAINT FK_viatico16 FOREIGN KEY (empleado_ID) REFERENCES empleado (empleado_ID));
 ALTER TABLE viatico ADD ( CONSTRAINT FK_viatico28 FOREIGN KEY (presupuesto_ID) REFERENCES presupuesto (presupuesto_ID));
@@ -247,8 +228,6 @@ ALTER TABLE gastoTarjeta ADD ( CONSTRAINT FK_gastoTarjeta30 FOREIGN KEY (rendici
 ALTER TABLE gastoTarjeta ADD ( CONSTRAINT FK_gastoTarjeta27 FOREIGN KEY (tipoComprobante_ID) REFERENCES tipoComprobante (tipoComprobante_ID));
 ALTER TABLE gastoTarjeta ADD ( CONSTRAINT FK_gastoTarjeta18 FOREIGN KEY (conceptoGasto_ID) REFERENCES conceptoGasto (conceptoGasto_ID));
 ALTER TABLE gastoTarjeta ADD ( CONSTRAINT FK_gastoTarjeta26 FOREIGN KEY (proveedor_ID) REFERENCES proveedor (proveedor_ID));
-ALTER TABLE reglaActivada ADD ( CONSTRAINT FK_reglaActivada5 FOREIGN KEY (viatico_ID) REFERENCES conceptoAsignado (viatico_ID));
-ALTER TABLE reglaActivada ADD ( CONSTRAINT FK_reglaActivada6 FOREIGN KEY (reglaNegocio_ID) REFERENCES reglaNegocio (reglaNegocio_ID));
 ALTER TABLE rendicion ADD ( CONSTRAINT FK_rendicion12 FOREIGN KEY (tarjetaCorporativa_ID) REFERENCES tarjetaCorporativa (tarjetaCorporativa_ID));
 ALTER TABLE rendicion ADD ( CONSTRAINT FK_rendicion22 FOREIGN KEY (viatico_ID) REFERENCES viatico (viatico_ID));
 
