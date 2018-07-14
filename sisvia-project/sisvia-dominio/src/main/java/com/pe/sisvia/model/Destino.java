@@ -3,6 +3,7 @@ package com.pe.sisvia.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 /**
@@ -15,7 +16,7 @@ public class Destino implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="DESTINO_DESTINOID_GENERATOR", sequenceName="SQ_DESTINO_ID")
+	@SequenceGenerator(name="DESTINO_DESTINOID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DESTINO_DESTINOID_GENERATOR")
 	@Column(name="DESTINO_ID")
 	private long destinoId;
@@ -60,5 +61,7 @@ public class Destino implements Serializable {
 	public void setZonacritica(BigDecimal zonacritica) {
 		this.zonacritica = zonacritica;
 	}
+
+
 
 }

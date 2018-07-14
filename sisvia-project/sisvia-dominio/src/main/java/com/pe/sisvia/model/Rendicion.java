@@ -16,7 +16,7 @@ public class Rendicion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="RENDICION_RENDICIONID_GENERATOR", sequenceName="SQ_RENDICION_ID")
+	@SequenceGenerator(name="RENDICION_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RENDICION_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
 	private long rendicionId;
@@ -35,11 +35,14 @@ public class Rendicion implements Serializable {
 
 	private double montototal;
 
-	@Column(name="TARJETACORPORATIVA_ID")
-	private BigDecimal tarjetacorporativaId;
+	//bi-directional one-to-one association to Gasto
+	@OneToOne(mappedBy="rendicion")
+	private Gasto gasto;
 
-	@Column(name="VIATICO_ID")
-	private BigDecimal viaticoId;
+	//bi-directional many-to-one association to Viatico
+	@ManyToOne
+	@JoinColumn(name="VIATICO_ID")
+	private Viatico viatico;
 
 	public Rendicion() {
 	}
@@ -100,20 +103,20 @@ public class Rendicion implements Serializable {
 		this.montototal = montototal;
 	}
 
-	public BigDecimal getTarjetacorporativaId() {
-		return this.tarjetacorporativaId;
+	public Gasto getGasto() {
+		return this.gasto;
 	}
 
-	public void setTarjetacorporativaId(BigDecimal tarjetacorporativaId) {
-		this.tarjetacorporativaId = tarjetacorporativaId;
+	public void setGasto(Gasto gasto) {
+		this.gasto = gasto;
 	}
 
-	public BigDecimal getViaticoId() {
-		return this.viaticoId;
+	public Viatico getViatico() {
+		return this.viatico;
 	}
 
-	public void setViaticoId(BigDecimal viaticoId) {
-		this.viaticoId = viaticoId;
+	public void setViatico(Viatico viatico) {
+		this.viatico = viatico;
 	}
 
 }

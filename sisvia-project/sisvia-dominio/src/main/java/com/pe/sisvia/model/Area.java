@@ -3,6 +3,7 @@ package com.pe.sisvia.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 /**
@@ -15,17 +16,20 @@ public class Area implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="AREA_AREAID_GENERATOR", sequenceName="SQ_AREA_ID")
+	@SequenceGenerator(name="AREA_AREAID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="AREA_AREAID_GENERATOR")
 	@Column(name="AREA_ID")
 	private long areaId;
 
-	@Column(name="CENTROCOSTO_ID")
-	private BigDecimal centrocostoId;
-
 	private BigDecimal codarea;
 
 	private String nomarea;
+
+	//bi-directional many-to-one association to Centrocosto
+	@ManyToOne
+	@JoinColumn(name="CENTROCOSTO_ID")
+	private Centrocosto centrocosto;
+
 
 	public Area() {
 	}
@@ -36,14 +40,6 @@ public class Area implements Serializable {
 
 	public void setAreaId(long areaId) {
 		this.areaId = areaId;
-	}
-
-	public BigDecimal getCentrocostoId() {
-		return this.centrocostoId;
-	}
-
-	public void setCentrocostoId(BigDecimal centrocostoId) {
-		this.centrocostoId = centrocostoId;
 	}
 
 	public BigDecimal getCodarea() {
@@ -61,5 +57,14 @@ public class Area implements Serializable {
 	public void setNomarea(String nomarea) {
 		this.nomarea = nomarea;
 	}
+
+	public Centrocosto getCentrocosto() {
+		return this.centrocosto;
+	}
+
+	public void setCentrocosto(Centrocosto centrocosto) {
+		this.centrocosto = centrocosto;
+	}
+
 
 }

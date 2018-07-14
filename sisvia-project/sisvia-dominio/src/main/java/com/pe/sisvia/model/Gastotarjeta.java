@@ -2,7 +2,6 @@ package com.pe.sisvia.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 
 
@@ -16,13 +15,10 @@ public class Gastotarjeta implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="GASTOTARJETA_RENDICIONID_GENERATOR", sequenceName="SQ_GASTOTARJETA_ID")
+	@SequenceGenerator(name="GASTOTARJETA_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GASTOTARJETA_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
 	private long rendicionId;
-
-	@Column(name="CONCEPTOGASTO_ID")
-	private BigDecimal conceptogastoId;
 
 	@Temporal(TemporalType.DATE)
 	private Date fecoperacion;
@@ -31,11 +27,25 @@ public class Gastotarjeta implements Serializable {
 
 	private String nrocomprobante;
 
-	@Column(name="PROVEEDOR_ID")
-	private BigDecimal proveedorId;
+	//bi-directional many-to-one association to Conceptogasto
+	@ManyToOne
+	@JoinColumn(name="CONCEPTOGASTO_ID")
+	private Conceptogasto conceptogasto;
 
-	@Column(name="TIPOCOMPROBANTE_ID")
-	private BigDecimal tipocomprobanteId;
+	//bi-directional one-to-one association to Gasto
+	@OneToOne
+	@JoinColumn(name="RENDICION_ID")
+	private Gasto gasto;
+
+	//bi-directional many-to-one association to Proveedor
+	@ManyToOne
+	@JoinColumn(name="PROVEEDOR_ID")
+	private Proveedor proveedor;
+
+	//bi-directional many-to-one association to Tipocomprobante
+	@ManyToOne
+	@JoinColumn(name="TIPOCOMPROBANTE_ID")
+	private Tipocomprobante tipocomprobante;
 
 	public Gastotarjeta() {
 	}
@@ -46,14 +56,6 @@ public class Gastotarjeta implements Serializable {
 
 	public void setRendicionId(long rendicionId) {
 		this.rendicionId = rendicionId;
-	}
-
-	public BigDecimal getConceptogastoId() {
-		return this.conceptogastoId;
-	}
-
-	public void setConceptogastoId(BigDecimal conceptogastoId) {
-		this.conceptogastoId = conceptogastoId;
 	}
 
 	public Date getFecoperacion() {
@@ -80,20 +82,36 @@ public class Gastotarjeta implements Serializable {
 		this.nrocomprobante = nrocomprobante;
 	}
 
-	public BigDecimal getProveedorId() {
-		return this.proveedorId;
+	public Conceptogasto getConceptogasto() {
+		return this.conceptogasto;
 	}
 
-	public void setProveedorId(BigDecimal proveedorId) {
-		this.proveedorId = proveedorId;
+	public void setConceptogasto(Conceptogasto conceptogasto) {
+		this.conceptogasto = conceptogasto;
 	}
 
-	public BigDecimal getTipocomprobanteId() {
-		return this.tipocomprobanteId;
+	public Gasto getGasto() {
+		return this.gasto;
 	}
 
-	public void setTipocomprobanteId(BigDecimal tipocomprobanteId) {
-		this.tipocomprobanteId = tipocomprobanteId;
+	public void setGasto(Gasto gasto) {
+		this.gasto = gasto;
+	}
+
+	public Proveedor getProveedor() {
+		return this.proveedor;
+	}
+
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
+	}
+
+	public Tipocomprobante getTipocomprobante() {
+		return this.tipocomprobante;
+	}
+
+	public void setTipocomprobante(Tipocomprobante tipocomprobante) {
+		this.tipocomprobante = tipocomprobante;
 	}
 
 }

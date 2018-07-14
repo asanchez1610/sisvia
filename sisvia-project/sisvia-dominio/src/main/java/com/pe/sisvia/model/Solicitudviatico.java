@@ -1,83 +1,118 @@
 package com.pe.sisvia.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * The persistent class for the SOLICITUDVIATICOS database table.
  * 
  */
 @Entity
-@Table(name="SOLICITUDVIATICOS")
-@NamedQuery(name="Solicitudviatico.findAll", query="SELECT s FROM Solicitudviatico s")
+@Table(name = "SOLICITUDVIATICOS")
+@NamedQuery(name = "Solicitudviatico.findAll", query = "SELECT s FROM Solicitudviatico s ORDER BY s.solicitudviaticosId DESC")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Solicitudviatico implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="SOLICITUDVIATICOS_SOLICITUDVIATICOSID_GENERATOR", sequenceName="SQ_SOLICITUSVIATICOS_ID")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SOLICITUDVIATICOS_SOLICITUDVIATICOSID_GENERATOR")
-	@Column(name="SOLICITUDVIATICOS_ID")
-	private long solicitudviaticosId;
+	@SequenceGenerator(name = "SOLICITUDVIATICOS_SOLICITUDVIATICOSID_GENERATOR", sequenceName = "SQ_AUTO_INCREMENT")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SOLICITUDVIATICOS_SOLICITUDVIATICOSID_GENERATOR")
+	@Column(name = "SOLICITUDVIATICOS_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Long solicitudviaticosId;
 
-	@Column(name="CENTROCOSTO_ID")
-	private BigDecimal centrocostoId;
-
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private BigDecimal codsolicitud;
 
-	@Column(name="COL_1")
-	private BigDecimal col1;
-
-	@Column(name="DESTINO_ID")
-	private BigDecimal destinoId;
-
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private BigDecimal duracion;
 
-	@Column(name="EMPLEADO_EMPLEADO_ID")
-	private BigDecimal empleadoEmpleadoId;
-
-	@Column(name="EMPLEADO_ID")
-	private BigDecimal empleadoId;
+	@Temporal(TemporalType.DATE)
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Date fecautoriza;
 
 	@Temporal(TemporalType.DATE)
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Date fecfin;
 
 	@Temporal(TemporalType.DATE)
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Date fecinicio;
 
 	@Temporal(TemporalType.DATE)
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Date fecregistro;
 
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private BigDecimal horas;
 
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private String motivocomision;
 
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private String motivorechazo;
 
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private BigDecimal pernocta;
 
-	@Column(name="TIPOCOMISION_ID")
-	private BigDecimal tipocomisionId;
+	// bi-directional many-to-one association to Destino
+	@ManyToOne
+	@JoinColumn(name = "DESTINO_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Destino destino;
+
+	// bi-directional many-to-one association to Empleado
+	@ManyToOne
+	@JoinColumn(name = "EMPLEADOAUTORIZA_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Empleado empleadoAuroriza;
+
+	// bi-directional many-to-one association to Empleado
+	@ManyToOne
+	@JoinColumn(name = "EMPLEADOCOMISIONADO_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Empleado empleadoComisionado;
+
+	// bi-directional many-to-one association to Empleado
+	@ManyToOne
+	@JoinColumn(name = "EMPLEADOSOLICITA_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Empleado empleadoSolicita;
+
+	// bi-directional many-to-one association to Tipocomision
+	@ManyToOne
+	@JoinColumn(name = "TIPOCOMISION_ID")
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Tipocomision tipocomision;
 
 	public Solicitudviatico() {
 	}
 
-	public long getSolicitudviaticosId() {
+	public Long getSolicitudviaticosId() {
 		return this.solicitudviaticosId;
 	}
 
-	public void setSolicitudviaticosId(long solicitudviaticosId) {
+	public void setSolicitudviaticosId(Long solicitudviaticosId) {
 		this.solicitudviaticosId = solicitudviaticosId;
-	}
-
-	public BigDecimal getCentrocostoId() {
-		return this.centrocostoId;
-	}
-
-	public void setCentrocostoId(BigDecimal centrocostoId) {
-		this.centrocostoId = centrocostoId;
 	}
 
 	public BigDecimal getCodsolicitud() {
@@ -88,22 +123,6 @@ public class Solicitudviatico implements Serializable {
 		this.codsolicitud = codsolicitud;
 	}
 
-	public BigDecimal getCol1() {
-		return this.col1;
-	}
-
-	public void setCol1(BigDecimal col1) {
-		this.col1 = col1;
-	}
-
-	public BigDecimal getDestinoId() {
-		return this.destinoId;
-	}
-
-	public void setDestinoId(BigDecimal destinoId) {
-		this.destinoId = destinoId;
-	}
-
 	public BigDecimal getDuracion() {
 		return this.duracion;
 	}
@@ -112,20 +131,12 @@ public class Solicitudviatico implements Serializable {
 		this.duracion = duracion;
 	}
 
-	public BigDecimal getEmpleadoEmpleadoId() {
-		return this.empleadoEmpleadoId;
+	public Date getFecautoriza() {
+		return this.fecautoriza;
 	}
 
-	public void setEmpleadoEmpleadoId(BigDecimal empleadoEmpleadoId) {
-		this.empleadoEmpleadoId = empleadoEmpleadoId;
-	}
-
-	public BigDecimal getEmpleadoId() {
-		return this.empleadoId;
-	}
-
-	public void setEmpleadoId(BigDecimal empleadoId) {
-		this.empleadoId = empleadoId;
+	public void setFecautoriza(Date fecautoriza) {
+		this.fecautoriza = fecautoriza;
 	}
 
 	public Date getFecfin() {
@@ -184,12 +195,117 @@ public class Solicitudviatico implements Serializable {
 		this.pernocta = pernocta;
 	}
 
-	public BigDecimal getTipocomisionId() {
-		return this.tipocomisionId;
+	public Destino getDestino() {
+		return this.destino;
 	}
 
-	public void setTipocomisionId(BigDecimal tipocomisionId) {
-		this.tipocomisionId = tipocomisionId;
+	public void setDestino(Destino destino) {
+		this.destino = destino;
+	}
+
+	public Empleado getEmpleadoAuroriza() {
+		return empleadoAuroriza;
+	}
+
+	public void setEmpleadoAuroriza(Empleado empleadoAuroriza) {
+		this.empleadoAuroriza = empleadoAuroriza;
+	}
+
+	public Empleado getEmpleadoComisionado() {
+		return empleadoComisionado;
+	}
+
+	public void setEmpleadoComisionado(Empleado empleadoComisionado) {
+		this.empleadoComisionado = empleadoComisionado;
+	}
+
+	public Empleado getEmpleadoSolicita() {
+		return empleadoSolicita;
+	}
+
+	public void setEmpleadoSolicita(Empleado empleadoSolicita) {
+		this.empleadoSolicita = empleadoSolicita;
+	}
+
+	public Tipocomision getTipocomision() {
+		return this.tipocomision;
+	}
+
+	public void setTipocomision(Tipocomision tipocomision) {
+		this.tipocomision = tipocomision;
+	}
+
+	// Atributos trasient
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String strFechaInicio;
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Viatico viatico;
+
+	public Viatico getViatico() {
+		return viatico;
+	}
+
+	public void setViatico(Viatico viatico) {
+		this.viatico = viatico;
+	}
+
+	public String getStrFechaInicio() {
+		return strFechaInicio;
+	}
+
+	public void setStrFechaInicio(String strFechaInicio) {
+		this.strFechaInicio = strFechaInicio;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String strFechaFin;
+
+	public String getStrFechaFin() {
+		return strFechaFin;
+	}
+
+	public void setStrFechaFin(String strFechaFin) {
+		this.strFechaFin = strFechaFin;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String numDni;
+
+	public String getNumDni() {
+		return numDni;
+	}
+
+	public void setNumDni(String numDni) {
+		this.numDni = numDni;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String nombreCompleto;
+
+	public String getNombreCompleto() {
+		return nombreCompleto;
+	}
+
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String codCentroCosto;
+
+	public String getCodCentroCosto() {
+		return codCentroCosto;
+	}
+
+	public void setCodCentroCosto(String codCentroCosto) {
+		this.codCentroCosto = codCentroCosto;
 	}
 
 }

@@ -1,8 +1,15 @@
 package com.pe.sisvia.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 
 
 /**
@@ -15,7 +22,7 @@ public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="CATEGORIA_CATEGORIAID_GENERATOR", sequenceName="SQ_CATEGORIA_ID")
+	@SequenceGenerator(name="CATEGORIA_CATEGORIAID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CATEGORIA_CATEGORIAID_GENERATOR")
 	@Column(name="CATEGORIA_ID")
 	private long categoriaId;
@@ -50,7 +57,5 @@ public class Categoria implements Serializable {
 	public void setNomcategoria(String nomcategoria) {
 		this.nomcategoria = nomcategoria;
 	}
-	
-	
 
 }

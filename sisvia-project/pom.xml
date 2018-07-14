@@ -10,10 +10,11 @@
 	<modules>
 		<module>sisvia-dominio</module>
 		<module>sisvia-dao</module>
-		<module>sisvia-service</module>
 		<module>sisvia-api</module>
 		<module>sisvia-web</module>
+		<module>sisvia-service</module>
 		<module>sisvia-util</module>
+		<module>sisvia-ws-client</module>
 	</modules>
 
 	<properties>

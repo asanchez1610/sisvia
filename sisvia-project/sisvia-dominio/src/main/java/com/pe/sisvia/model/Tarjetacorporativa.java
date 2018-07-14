@@ -2,7 +2,6 @@ package com.pe.sisvia.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 
 
@@ -16,12 +15,12 @@ public class Tarjetacorporativa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="TARJETACORPORATIVA_TARJETACORPORATIVAID_GENERATOR", sequenceName="SQ_TARJETACOOPERATIVA_ID")
+	@SequenceGenerator(name="TARJETACORPORATIVA_TARJETACORPORATIVAID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TARJETACORPORATIVA_TARJETACORPORATIVAID_GENERATOR")
 	@Column(name="TARJETACORPORATIVA_ID")
-	private long tarjetacorporativaId;
+	private Long tarjetacorporativaId;
 
-	private double credito;
+	private Double credito;
 
 	@Temporal(TemporalType.DATE)
 	private Date fecactivacion;
@@ -36,25 +35,27 @@ public class Tarjetacorporativa implements Serializable {
 
 	private String numtarjeta;
 
-	@Column(name="VIATICO_ID")
-	private BigDecimal viaticoId;
+	//bi-directional many-to-one association to Viatico
+	@ManyToOne
+	@JoinColumn(name="VIATICO_ID")
+	private Viatico viatico;
 
 	public Tarjetacorporativa() {
 	}
 
-	public long getTarjetacorporativaId() {
+	public Long getTarjetacorporativaId() {
 		return this.tarjetacorporativaId;
 	}
 
-	public void setTarjetacorporativaId(long tarjetacorporativaId) {
+	public void setTarjetacorporativaId(Long tarjetacorporativaId) {
 		this.tarjetacorporativaId = tarjetacorporativaId;
 	}
 
-	public double getCredito() {
+	public Double getCredito() {
 		return this.credito;
 	}
 
-	public void setCredito(double credito) {
+	public void setCredito(Double credito) {
 		this.credito = credito;
 	}
 
@@ -98,12 +99,12 @@ public class Tarjetacorporativa implements Serializable {
 		this.numtarjeta = numtarjeta;
 	}
 
-	public BigDecimal getViaticoId() {
-		return this.viaticoId;
+	public Viatico getViatico() {
+		return this.viatico;
 	}
 
-	public void setViaticoId(BigDecimal viaticoId) {
-		this.viaticoId = viaticoId;
+	public void setViatico(Viatico viatico) {
+		this.viatico = viatico;
 	}
 
 }

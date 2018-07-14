@@ -15,7 +15,7 @@ public class Gasto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="GASTO_RENDICIONID_GENERATOR", sequenceName="SQ_GASTO_ID")
+	@SequenceGenerator(name="GASTO_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GASTO_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
 	private long rendicionId;
@@ -24,6 +24,19 @@ public class Gasto implements Serializable {
 	private Date fecregistrogasto;
 
 	private String tipogasto;
+
+	//bi-directional one-to-one association to Rendicion
+	@OneToOne
+	@JoinColumn(name="RENDICION_ID")
+	private Rendicion rendicion;
+
+	//bi-directional one-to-one association to Gastoefectivo
+	@OneToOne(mappedBy="gasto")
+	private Gastoefectivo gastoefectivo;
+
+	//bi-directional one-to-one association to Gastotarjeta
+	@OneToOne(mappedBy="gasto")
+	private Gastotarjeta gastotarjeta;
 
 	public Gasto() {
 	}
@@ -50,6 +63,30 @@ public class Gasto implements Serializable {
 
 	public void setTipogasto(String tipogasto) {
 		this.tipogasto = tipogasto;
+	}
+
+	public Rendicion getRendicion() {
+		return this.rendicion;
+	}
+
+	public void setRendicion(Rendicion rendicion) {
+		this.rendicion = rendicion;
+	}
+
+	public Gastoefectivo getGastoefectivo() {
+		return this.gastoefectivo;
+	}
+
+	public void setGastoefectivo(Gastoefectivo gastoefectivo) {
+		this.gastoefectivo = gastoefectivo;
+	}
+
+	public Gastotarjeta getGastotarjeta() {
+		return this.gastotarjeta;
+	}
+
+	public void setGastotarjeta(Gastotarjeta gastotarjeta) {
+		this.gastotarjeta = gastotarjeta;
 	}
 
 }

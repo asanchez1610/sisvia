@@ -1,8 +1,20 @@
 package com.pe.sisvia.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 /**
@@ -15,21 +27,24 @@ public class Presupuesto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="PRESUPUESTO_PRESUPUESTOID_GENERATOR", sequenceName="SQ_PRESUPUESTO_ID")
+	@SequenceGenerator(name="PRESUPUESTO_PRESUPUESTOID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PRESUPUESTO_PRESUPUESTOID_GENERATOR")
 	@Column(name="PRESUPUESTO_ID")
 	private long presupuestoId;
 
 	private String anno;
 
-	@Column(name="CENTROCOSTO_ID")
-	private BigDecimal centrocostoId;
-
 	private BigDecimal codpresupuesto;
 
 	private double presupuestoasignado;
 
 	private double presupuestoejecutado;
+
+	//bi-directional many-to-one association to Centrocosto
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="CENTROCOSTO_ID")
+	@JsonBackReference
+	private Centrocosto centrocosto;
 
 	public Presupuesto() {
 	}
@@ -48,14 +63,6 @@ public class Presupuesto implements Serializable {
 
 	public void setAnno(String anno) {
 		this.anno = anno;
-	}
-
-	public BigDecimal getCentrocostoId() {
-		return this.centrocostoId;
-	}
-
-	public void setCentrocostoId(BigDecimal centrocostoId) {
-		this.centrocostoId = centrocostoId;
 	}
 
 	public BigDecimal getCodpresupuesto() {
@@ -80,6 +87,14 @@ public class Presupuesto implements Serializable {
 
 	public void setPresupuestoejecutado(double presupuestoejecutado) {
 		this.presupuestoejecutado = presupuestoejecutado;
+	}
+
+	public Centrocosto getCentrocosto() {
+		return this.centrocosto;
+	}
+
+	public void setCentrocosto(Centrocosto centrocosto) {
+		this.centrocosto = centrocosto;
 	}
 
 }

@@ -3,6 +3,7 @@ package com.pe.sisvia.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 /**
@@ -15,7 +16,7 @@ public class Conceptogasto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="CONCEPTOGASTO_CONCEPTOGASTOID_GENERATOR", sequenceName="SQ_CONCEPTOGASTO_ID")
+	@SequenceGenerator(name="CONCEPTOGASTO_CONCEPTOGASTOID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CONCEPTOGASTO_CONCEPTOGASTOID_GENERATOR")
 	@Column(name="CONCEPTOGASTO_ID")
 	private long conceptogastoId;

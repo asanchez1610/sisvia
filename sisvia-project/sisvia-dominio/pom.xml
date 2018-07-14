@@ -7,10 +7,11 @@
   </parent>
   <artifactId>sisvia-dominio</artifactId>
   <dependencies>
-  	<dependency>
-  		<groupId>com.pe.sisvia</groupId>
-  		<artifactId>sisvia-util</artifactId>
-  		<version>1.0</version>
-  	</dependency>
+
+  <dependency>
+  	<groupId>com.pe.sisvia</groupId>
+  	<artifactId>sisvia-util</artifactId>
+  	<version>1.0</version>
+  </dependency>
   </dependencies>
 </project>

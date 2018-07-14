@@ -3,6 +3,7 @@ package com.pe.sisvia.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 /**
@@ -15,7 +16,7 @@ public class Tipocomision implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="TIPOCOMISION_TIPOCOMISIONID_GENERATOR", sequenceName="SQ_TIPOCOMISION_ID")
+	@SequenceGenerator(name="TIPOCOMISION_TIPOCOMISIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TIPOCOMISION_TIPOCOMISIONID_GENERATOR")
 	@Column(name="TIPOCOMISION_ID")
 	private long tipocomisionId;

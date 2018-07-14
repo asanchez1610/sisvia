@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -16,18 +17,12 @@ public class Empleado implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="EMPLEADO_EMPLEADOID_GENERATOR", sequenceName="SQ_EMPLEADO_ID")
+	@SequenceGenerator(name="EMPLEADO_EMPLEADOID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="EMPLEADO_EMPLEADOID_GENERATOR")
 	@Column(name="EMPLEADO_ID")
 	private long empleadoId;
 
 	private String apellido;
-
-	@Column(name="AREA_ID")
-	private BigDecimal areaId;
-
-	@Column(name="CATEGORIA_ID")
-	private BigDecimal categoriaId;
 
 	private BigDecimal codemleado;
 
@@ -41,6 +36,16 @@ public class Empleado implements Serializable {
 	private String numerodocuento;
 
 	private String tipodocumento;
+
+	//bi-directional many-to-one association to Area
+	@ManyToOne
+	@JoinColumn(name="AREA_ID")
+	private Area area;
+
+	//bi-directional many-to-one association to Categoria
+	@ManyToOne
+	@JoinColumn(name="CATEGORIA_ID")
+	private Categoria categoria;
 
 	public Empleado() {
 	}
@@ -59,22 +64,6 @@ public class Empleado implements Serializable {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
-	}
-
-	public BigDecimal getAreaId() {
-		return this.areaId;
-	}
-
-	public void setAreaId(BigDecimal areaId) {
-		this.areaId = areaId;
-	}
-
-	public BigDecimal getCategoriaId() {
-		return this.categoriaId;
-	}
-
-	public void setCategoriaId(BigDecimal categoriaId) {
-		this.categoriaId = categoriaId;
 	}
 
 	public BigDecimal getCodemleado() {
@@ -123,6 +112,22 @@ public class Empleado implements Serializable {
 
 	public void setTipodocumento(String tipodocumento) {
 		this.tipodocumento = tipodocumento;
+	}
+
+	public Area getArea() {
+		return this.area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
+
+	public Categoria getCategoria() {
+		return this.categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 }

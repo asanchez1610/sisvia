@@ -2,6 +2,7 @@ package com.pe.sisvia.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -14,7 +15,7 @@ public class Proveedor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="PROVEEDOR_PROVEEDORID_GENERATOR", sequenceName="SQ_PROVEEDOR_ID")
+	@SequenceGenerator(name="PROVEEDOR_PROVEEDORID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PROVEEDOR_PROVEEDORID_GENERATOR")
 	@Column(name="PROVEEDOR_ID")
 	private long proveedorId;

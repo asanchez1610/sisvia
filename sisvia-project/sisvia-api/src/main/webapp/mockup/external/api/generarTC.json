@@ -1,0 +1,11 @@
+{
+  "tarjeta": {
+    "credito": 450.00,
+    "estadoTarjeta": "Asignada",
+    "fechaRegistro": "11-07-2018",
+    "fechaActivacion": null,
+    "fechaCancelacion": null,
+    "numeroTarjeta": "2014421274856589",
+    "numeroCuenta": "200011452589654718"
+  }
+}

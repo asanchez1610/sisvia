@@ -2,6 +2,7 @@ package com.pe.sisvia.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -14,7 +15,7 @@ public class Tipocomprobante implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="TIPOCOMPROBANTE_TIPOCOMPROBANTEID_GENERATOR", sequenceName="SQ_TIPOCOMPROBANTE_ID")
+	@SequenceGenerator(name="TIPOCOMPROBANTE_TIPOCOMPROBANTEID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TIPOCOMPROBANTE_TIPOCOMPROBANTEID_GENERATOR")
 	@Column(name="TIPOCOMPROBANTE_ID")
 	private long tipocomprobanteId;

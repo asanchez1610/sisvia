@@ -15,7 +15,7 @@ public class Gastoefectivo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="GASTOEFECTIVO_RENDICIONID_GENERATOR", sequenceName="SQ_GASTOEFECTIVO_ID")
+	@SequenceGenerator(name="GASTOEFECTIVO_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GASTOEFECTIVO_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
 	private long rendicionId;
@@ -26,6 +26,11 @@ public class Gastoefectivo implements Serializable {
 	private double montogasto;
 
 	private String observacion;
+
+	//bi-directional one-to-one association to Gasto
+	@OneToOne
+	@JoinColumn(name="RENDICION_ID")
+	private Gasto gasto;
 
 	public Gastoefectivo() {
 	}
@@ -60,6 +65,14 @@ public class Gastoefectivo implements Serializable {
 
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
+	}
+
+	public Gasto getGasto() {
+		return this.gasto;
+	}
+
+	public void setGasto(Gasto gasto) {
+		this.gasto = gasto;
 	}
 
 }
