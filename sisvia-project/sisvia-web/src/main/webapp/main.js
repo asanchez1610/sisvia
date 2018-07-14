@@ -321,7 +321,7 @@ module.exports = ".box-terminate{\r\n    opacity: 0.8;\r\n    filter: alpha(opac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card bg-gris-light panel-border-gris\">\n  <div class=\"card-body card-body-contenedor-form-fields\">\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n        <div class=\"alert alert-light bg-gris-light-strong box-terminate panel-border-gris text-center\">\n          <strong>REGISTRADO</strong>\n        </div>\n      </div>\n      <div class=\"col-12 col-sm-12 col-md-4 col-lg-4 text-center\">\n        <div class=\"alert alert-success\">\n          <strong style=\"text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);\">AUTORIZADO</strong>\n        </div>\n      </div>\n      <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n        <div class=\"alert alert-light bg-gris-light-strong box-terminate panel-border-gris text-center\">\n          <strong>ASIGNADO</strong>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n  <div class=\"card-body\">\n\n    <div class=\"row-contenedor\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label>Codigo:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label>Fec. Aprobacion:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n          <label>Área:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"row-contenedor\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label>Comisionado:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"row-contenedor\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label for=\"txtDni\">DNI:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n          <input type=\"text\" class=\"form-control\" disabled id=\"txtDni\">\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label for=\"txtCentroCosto\">Centro de costo:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n          <input type=\"text\" class=\"form-control\" disabled id=\"txtCentroCosto\">\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n          <label for=\"txtCategoria\">Categoría:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n          <input type=\"text\" class=\"form-control\" disabled id=\"txtCategoria\">\n        </div>\n      </div>\n    </div>\n\n\n    <div class=\"row-contenedor\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n          <label>Tipo de comision:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n          <label>Destino:</label>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n          <input type=\"text\" class=\"form-control\" disabled>\n        </div>\n\n        <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n          <div class=\"form-check form-checked-form\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" disabled type=\"checkbox\">\n              <span>Zona critica</span>\n            </label>\n          </div>\n        </div>\n\n      </div>\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Fecha inicio:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input type=\"text\" class=\"form-control\" disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>Fec. Fin:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input type=\"text\" class=\"form-control\" disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <div class=\"alert alert-success info-diferencia-dias\">\n              <strong>Duracion:</strong> 4 días.\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            &nbsp;\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"form-check form-checked-form\">\n              <label class=\"form-check-label\">\n                <input class=\"form-check-input\" disabled type=\"checkbox\">\n                <span>Mayor a 6 horas</span>\n              </label>\n            </div>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"form-check form-checked-form\">\n              <label class=\"form-check-label\">\n                <input class=\"form-check-input\" disabled type=\"checkbox\">\n                <span>Pernocta</span>\n              </label>\n            </div>\n          </div>\n        </div>\n        <div class=\"row-contenedor\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              Motivo comisión:\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n              <textarea class=\"form-control\" id=\"motivoComision\" disabled rows=\"3\"></textarea>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n  <div class=\"card-body card-body-contenedor-busqueda\">\n    <div class=\"row-contenedor\" style=\"margin-bottom: 20px;\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-6 col-lg-6\">\n          <div class=\"card border-secondary panel\">\n            <div class=\"card-body\">\n              <h4 class=\"card-title\">Total de Viaticos 450.00</h4>\n              <div class=\"row\">\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-6\">\n                  <ng-select [items]=\"items\" bindLabel=\"name\" bindValue=\"id\" placeholder=\"Concepto\">\n                  </ng-select>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-4\">\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Monto\" />\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-1\">\n                  <button class=\"btn btn-outline-secondary btn-svg\" ngbTooltip=\"Agregar\" type=\"button\">\n                    <img src=\"assets/img/plus.svg\" />\n                  </button>\n                </div>\n              </div>\n\n              <table class=\"table table-sm table-bordered margin-top-10 table-montos\">\n                <thead class=\"thead-dark\">\n                  <tr>\n                    <th>Concepto</th>\n                    <th>Monto</th>\n                    <th>&nbsp;</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>Viaticos</td>\n                    <td>300</td>\n                    <td style=\"text-align: center;\">\n                      <button class=\"btn btn-outline-secondary btn-svg\" type=\"button\">\n                        <img src=\"assets/img/delete.svg\" />\n                      </button>\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>Movilidad</td>\n                    <td>240</td>\n                    <td style=\"text-align: center;\">\n                      <button class=\"btn btn-outline-secondary btn-svg\" type=\"button\">\n                        <img src=\"assets/img/delete.svg\" />\n                      </button>\n                    </td>\n                  </tr>\n                </tbody>\n              </table>\n\n              <div style=\"width: 100%;margin-top: 5px;text-align: right\">\n                <button class=\"btn btn-success btn-sm\">Calcular Monto</button>\n              </div>\n\n            </div>\n          </div>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-6 col-lg-6\">\n          <div class=\"card border-secondary panel\">\n            <div class=\"card-body\">\n              <h4 class=\"card-title\">Tarjeta de crédito</h4>\n\n              <div class=\"row margin-top-5 content-detalle-tarjeta\">\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                  Credito:\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                  540.00\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                  Estado:\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                  Aprobado\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                  Fecha Registro:\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                  22/01/2010 12:00 PM\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                  N° Tarjeta:\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                  213243546567876542\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                  N° Cuenta:\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                  2001-1212-1121-3453\n                </div>\n              </div>\n\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"card-footer text-center panel-border-top-gris\">\n    <button type=\"button\" class=\"btn btn-success margin-right-10 btn-actions-form\">Generar TC y Registrar</button>\n    <button type=\"button\" class=\"btn btn-primary margin-right-10 btn-actions-form\">Cancelar</button>\n    <a routerLink=\"/asignar-viaticos\" class=\"btn btn-danger btn-actions-form\">Regresar</a>\n  </div>\n</div>"
+module.exports = "<div>\n \n  <div class=\"card bg-gris-light panel-border-gris\">\n    <div class=\"card-body card-body-contenedor-form-fields\">\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n          <div class=\"alert {{boxRegistrado}} text-center\">\n            <strong class=\"{{textShadowRegistrado}}\" >REGISTRADO</strong>\n          </div>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n          <div class=\"alert {{boxAutorizado}} text-center\">\n            <strong class=\"{{textShadowAutorizado}}\">AUTORIZADO</strong>\n          </div>\n        </div>\n        <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n          <div class=\"alert {{boxAsignado}} text-center\">\n            <strong class=\"{{textShadowAsignado}}\" >ASIGNADO</strong>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n    <div class=\"card-body\">\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Codigo:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input [(ngModel)]=\"solicitud.solicitudviaticosId\" type=\"text\" class=\"form-control\" disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Fec. Aprobacion:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input [(ngModel)]=\"solicitud.fecautoriza\" type=\"text\" class=\"form-control\" disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>Área:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input [(ngModel)]=\"solicitud.empleadoComisionado.area.nomarea\" type=\"text\" class=\"form-control\" disabled>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Comisionado:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-5 col-lg-5\">\n            <input value=\"{{solicitud.empleadoComisionado.apellido}} {{solicitud.empleadoComisionado.nombre}}\" type=\"text\" class=\"form-control\"\n              disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Presupuesto área:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input value=\"{{solicitud.empleadoComisionado.area.centrocosto.presupuesto.presupuestoasignado}}\" type=\"text\" class=\"form-control\"\n              disabled>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label for=\"txtDni\">DNI:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input type=\"text\" value=\"{{solicitud.empleadoComisionado.numerodocuento}}\" class=\"form-control\" disabled id=\"txtDni\">\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label for=\"txtCentroCosto\">Centro de costo:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input type=\"text\" value=\"{{solicitud.empleadoComisionado.area.centrocosto.nomcc}}\" class=\"form-control\" disabled id=\"txtCentroCosto\">\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtCategoria\">Categoría:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input type=\"text\" value=\"{{solicitud.empleadoComisionado.categoria.nomcategoria}}\" class=\"form-control\" disabled id=\"txtCategoria\">\n          </div>\n        </div>\n      </div>\n\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n            <label>Tipo de comision:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <input value=\"{{solicitud.tipocomision.nomcomision}}\" type=\"text\" class=\"form-control\" disabled>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>Destino:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-4 col-lg-4\">\n            <input value=\"{{solicitud.destino.nomdestino}}\" type=\"text\" class=\"form-control\" disabled>\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"form-check form-checked-form\">\n              <label class=\"form-check-label\">\n                <input class=\"form-check-input\" disabled [checked]=\"isZonaCritica\" type=\"checkbox\">\n                <span>Zona critica</span>\n              </label>\n            </div>\n          </div>\n\n        </div>\n\n        <div class=\"row-contenedor\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              <label>Fecha inicio:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n              <input value=\"{{solicitud.fecinicio}}\" type=\"text\" class=\"form-control\" disabled>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n              <label>Fec. Fin:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n              <input value=\"{{solicitud.fecfin}}\" type=\"text\" class=\"form-control\" disabled>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n              <div class=\"alert alert-success info-diferencia-dias\">\n                <strong>Duracion:</strong> {{msgDias}}.\n              </div>\n            </div>\n          </div>\n          <div class=\"row\" *ngIf=\"showMas6Horas\">\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n              &nbsp;\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n              <div class=\"form-check form-checked-form\">\n                <label class=\"form-check-label\">\n                  <input class=\"form-check-input\" [checked]=\"isHoras\" disabled type=\"checkbox\">\n                  <span>Mayor a 6 horas</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n              <div class=\"form-check form-checked-form\">\n                <label class=\"form-check-label\">\n                  <input class=\"form-check-input\" [checked]=\"isPernocta\" disabled type=\"checkbox\">\n                  <span>Pernocta</span>\n                </label>\n              </div>\n            </div>\n          </div>\n          <div class=\"row-contenedor\">\n            <div class=\"row\">\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                Motivo comisión:\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                <textarea value=\"{{solicitud.motivocomision}}\" class=\"form-control\" id=\"motivoComision\" disabled rows=\"3\"></textarea>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n    <ngx-loading [show]=\"loading\" [config]=\"{ }\"></ngx-loading>\n    <div class=\"card-body card-body-contenedor-busqueda\">\n      <div class=\"row-contenedor\" style=\"margin-bottom: 20px;\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-6 col-lg-6\">\n            <div class=\"card border-secondary panel\">\n              <ngx-loading [show]=\"loadingMontos\" [config]=\"{ }\"></ngx-loading>\n              <div class=\"card-body\">\n                <h4 class=\"card-title\">Total de Viaticos: {{totalMonto}}</h4>\n                <div class=\"row\" *ngIf=\"false\">\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-6\">\n                    <ng-select [items]=\"items\" bindLabel=\"name\" bindValue=\"id\" placeholder=\"Concepto\">\n                    </ng-select>\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-4\">\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Monto\" />\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-1\">\n                    <button class=\"btn btn-outline-secondary btn-svg\" ngbTooltip=\"Agregar\" type=\"button\">\n                      <img src=\"assets/img/plus.svg\" />\n                    </button>\n                  </div>\n                </div>\n\n                <table class=\"table table-sm table-bordered margin-top-10 table-montos\">\n                  <thead class=\"thead-dark\">\n                    <tr>\n                      <th>Concepto</th>\n                      <th>Monto</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <td>Viaticos</td>\n                      <td>{{montoViatico}}</td>\n                    </tr>\n                    <tr>\n                      <td>Movilidad</td>\n                      <td>{{montoMovilidad}}</td>\n                    </tr>\n                  </tbody>\n                </table>\n\n                <div style=\"width: 100%;margin-top: 5px;text-align: right\">\n                  <button (click)=\"calcularMonto()\" [hidden] = \"isAsignado\"  class=\"btn btn-success btn-sm\">Calcular Monto</button>\n                </div>\n\n              </div>\n            </div>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-6 col-lg-6\">\n            <div class=\"card border-secondary panel\">\n              <div class=\"card-body\">\n                <h4 class=\"card-title\">Tarjeta de crédito</h4>\n\n\n                <div class=\"row margin-top-5 content-detalle-tarjeta\">\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                    Credito:\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                    {{montoCreditoTc}}\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                    Estado:\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                    {{estadoTc}}\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                    Fecha Registro:\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                    {{fechaRegistroTc}}\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                    N° Tarjeta:\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                    {{numTc}}\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-3 label-tarjeta\">\n                    N° Cuenta:\n                  </div>\n                  <div class=\"col-12 col-sm-12 col-md-12 col-lg-9\">\n                    {{numCtaTc}}\n                  </div>\n                </div>\n\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"card-footer text-center panel-border-top-gris\">\n      <button [hidden] = \"isAsignado\" type=\"button\" (click)=\"generarTCAndRegistrarViatico()\" class=\"btn btn-success margin-right-10 btn-actions-form\">Generar TC y Registrar</button>\n      <a  routerLink=\"/asignar-viaticos\" class=\"btn btn-danger btn-actions-form\">Regresar</a>\n    </div>\n  </div>\n</div>\n\n<swal #alertResponse title=\"{{titleSwal}}\" text=\"{{msgSwal}}\" type=\"{{typeSwal}}\" [showCancelButton]=\"false\" [focusCancel]=\"false\">\n</swal>"
 
 /***/ }),
 
@@ -336,6 +336,9 @@ module.exports = "<div class=\"card bg-gris-light panel-border-gris\">\n  <div c
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AsignarViaticoFormComponent", function() { return AsignarViaticoFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/api-service.service */ "./src/app/services/api-service.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -346,18 +349,214 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var AsignarViaticoFormComponent = /** @class */ (function () {
-    function AsignarViaticoFormComponent() {
+    function AsignarViaticoFormComponent(apiService, route) {
+        this.apiService = apiService;
+        this.route = route;
+        this.loading = true;
+        this.solicitud = null;
+        this.isZonaCritica = true;
+        this.titleSwal = '';
+        this.msgSwal = '';
+        this.typeSwal = '';
+        this.showMas6Horas = false;
+        this.isHoras = false;
+        this.isPernocta = false;
+        this.msgDias = '';
+        this.totalMonto = '0.00';
+        this.montoViatico = '0.00';
+        this.montoMovilidad = '0.00';
+        this.loadingMontos = false;
+        this.montoCreditoTc = '--';
+        this.estadoTc = '--';
+        this.fechaRegistroTc = '--';
+        this.numTc = '--';
+        this.numCtaTc = '--';
+        this.boxRegistrado = '';
+        this.boxAutorizado = '';
+        this.boxAsignado = '';
+        this.textShadowRegistrado = '';
+        this.textShadowAutorizado = '';
+        this.textShadowAsignado = '';
+        this.isAsignado = false;
     }
     AsignarViaticoFormComponent.prototype.ngOnInit = function () {
+        this.setSolicitud();
     };
+    AsignarViaticoFormComponent.prototype.setSolicitud = function () {
+        var _this = this;
+        var id = +this.route.snapshot.paramMap.get('idsolicitud');
+        this.apiService.obtenerSolicitudPorId(id)
+            .subscribe(function (data) {
+            _this.loading = false;
+            _this.solicitud = data;
+            _this.marcarFlags(data);
+            _this.seleccionBoxEstado();
+        }, function (error) {
+            _this.loading = false;
+            _this.showDialog('Error', error.error.message, 'error');
+        });
+    };
+    AsignarViaticoFormComponent.prototype.seleccionBoxEstado = function () {
+        var _this = this;
+        if (this.solicitud) {
+            if (this.solicitud['viatico'] && this.solicitud['viatico']['tarjetaCorporativa']) {
+                var viatico = this.solicitud['viatico'];
+                var tarjeta = this.solicitud['viatico']['tarjetaCorporativa'];
+                var conceptos = this.solicitud['viatico']['conceptosAsignados'];
+                this.isAsignado = true;
+                if (conceptos) {
+                    conceptos.forEach(function (conceptoAsignado) {
+                        if (conceptoAsignado.conceptogastoId == 1) {
+                            _this.montoViatico = conceptoAsignado.montogasto + '';
+                        }
+                        else if (conceptoAsignado.conceptogastoId == 2) {
+                            _this.montoMovilidad = conceptoAsignado.montogasto + '';
+                        }
+                    });
+                }
+                this.totalMonto = viatico['montototal'] + '';
+                this.montoCreditoTc = tarjeta['credito'];
+                this.estadoTc = 'Asignado';
+                this.fechaRegistroTc = tarjeta['fecregistro'];
+                this.numTc = tarjeta['numtarjeta'];
+                this.numCtaTc = tarjeta['numcuenta'];
+                this.boxRegistrado = this.getTerminateBox();
+                this.boxAutorizado = this.getTerminateBox();
+                this.boxAsignado = this.getActiveBox();
+                this.textShadowRegistrado = '';
+                this.textShadowAutorizado = '';
+                this.textShadowAsignado = this.getShadowText();
+            }
+            else if (this.solicitud['fecautoriza']) {
+                this.boxRegistrado = this.getTerminateBox();
+                this.boxAutorizado = this.getActiveBox();
+                this.boxAsignado = this.getTerminateBox();
+                this.textShadowRegistrado = '';
+                this.textShadowAutorizado = this.getShadowText();
+                this.textShadowAsignado = '';
+            }
+            else {
+                this.boxRegistrado = this.getActiveBox();
+                this.boxAutorizado = this.getTerminateBox();
+                this.boxAsignado = this.getTerminateBox();
+                this.textShadowRegistrado = this.getShadowText();
+                this.textShadowAutorizado = '';
+                this.textShadowAsignado = '';
+            }
+        }
+        else {
+            this.boxRegistrado = this.getActiveBox();
+            this.boxAutorizado = this.getTerminateBox();
+            this.boxAsignado = this.getTerminateBox();
+            this.textShadowRegistrado = this.getShadowText();
+            this.textShadowAutorizado = '';
+            this.textShadowAsignado = '';
+        }
+    };
+    AsignarViaticoFormComponent.prototype.marcarFlags = function (dataSolicitud) {
+        this.isZonaCritica = (dataSolicitud['destino']['zonacritica'] == 1 ? true : false);
+        if (dataSolicitud['duracion'] == 1) {
+            this.msgDias = dataSolicitud['duracion'] + ' día';
+            this.showMas6Horas = true;
+            if (dataSolicitud['horas'] == 1) {
+                this.isHoras = true;
+                if (dataSolicitud['horas'] == 1) {
+                    this.isPernocta = true;
+                }
+            }
+        }
+        else {
+            this.msgDias = dataSolicitud['duracion'] + ' días';
+        }
+    };
+    AsignarViaticoFormComponent.prototype.showDialog = function (title, msg, type) {
+        var _this = this;
+        this.titleSwal = title;
+        this.msgSwal = msg;
+        this.typeSwal = type;
+        setTimeout(function () {
+            _this.alertResponse.show();
+        }, 100);
+    };
+    AsignarViaticoFormComponent.prototype.calcularMonto = function () {
+        var _this = this;
+        this.loadingMontos = true;
+        this.apiService.calcularMonto()
+            .subscribe(function (data) {
+            _this.loadingMontos = false;
+            _this.totalMonto = data['montos']['montoTotal'];
+            _this.montoMovilidad = data['montos']['montoMovilidad'];
+            _this.montoViatico = data['montos']['montoViatico'];
+        }, function (error) {
+            _this.loadingMontos = false;
+            _this.totalMonto = '';
+            _this.montoMovilidad = '';
+            _this.montoViatico = '';
+            _this.showDialog('Error', error.error.message, 'error');
+        });
+    };
+    AsignarViaticoFormComponent.prototype.generarTCAndRegistrarViatico = function () {
+        var _this = this;
+        if (parseFloat(this.totalMonto) == 0) {
+            this.showDialog('Error', 'Por favor calcule el monto total de viaticos', 'error');
+            return;
+        }
+        var asignacion = {
+            "solicitudviaticosId": this.solicitud['solicitudviaticosId'],
+            "montoTotal": this.totalMonto,
+            "montogastoMovilidad": this.montoMovilidad,
+            "montogastoViatico": this.montoViatico
+        };
+        this.loading = true;
+        this.apiService.asignarViatico(asignacion)
+            .subscribe(function (data) {
+            _this.loading = false;
+            var tarjeta = data['tarjeta'];
+            _this.montoCreditoTc = tarjeta['credito'];
+            _this.estadoTc = 'Asignado';
+            _this.fechaRegistroTc = tarjeta['fecregistro'];
+            _this.numTc = tarjeta['numtarjeta'];
+            _this.numCtaTc = tarjeta['numcuenta'];
+            _this.boxRegistrado = _this.getTerminateBox();
+            _this.boxAutorizado = _this.getTerminateBox();
+            _this.boxAsignado = _this.getActiveBox();
+            _this.textShadowRegistrado = '';
+            _this.textShadowAutorizado = '';
+            _this.textShadowAsignado = _this.getShadowText();
+            _this.isAsignado = true;
+            _this.showDialog('Exito', 'La Solicitud de viático N° ' + data['viatico'].viaticoId + ', se registró correctamente.', 'success');
+        }, function (error) {
+            _this.loading = false;
+            if (error && error.error && error.error.message) {
+                _this.showDialog('Error', error.error.message, 'error');
+            }
+        });
+    };
+    AsignarViaticoFormComponent.prototype.getTerminateBox = function () {
+        return 'alert-light bg-gris-light-strong box-terminate panel-border-gris';
+    };
+    AsignarViaticoFormComponent.prototype.getActiveBox = function () {
+        return 'alert-success';
+    };
+    AsignarViaticoFormComponent.prototype.getShadowText = function () {
+        return 'text-sombreado';
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('alertResponse'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_3__["SwalComponent"])
+    ], AsignarViaticoFormComponent.prototype, "alertResponse", void 0);
     AsignarViaticoFormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-asignar-viatico-form',
             template: __webpack_require__(/*! ./asignar-viatico-form.component.html */ "./src/app/components/asignar-viatico-form/asignar-viatico-form.component.html"),
             styles: [__webpack_require__(/*! ./asignar-viatico-form.component.css */ "./src/app/components/asignar-viatico-form/asignar-viatico-form.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_api_service_service__WEBPACK_IMPORTED_MODULE_1__["ApiServiceService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], AsignarViaticoFormComponent);
     return AsignarViaticoFormComponent;
 }());
@@ -384,7 +583,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card bg-gris-light panel-border-gris\">\n  <div class=\"card-body card-body-contenedor-busqueda\">\n\n    <div class=\"form-group\">\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtCodigo-b-v\">Código:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input type=\"text\" class=\"form-control\" id=\"txtCodigo-b-v\">\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtDni-b-v\">DNI:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input type=\"text\" class=\"form-control\" id=\"txtDni-b-v\">\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtNombre-b-v\">Nombre:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-5 col-lg-5\">\n            <input type=\"text\" class=\"form-control\" id=\"txtNombre-b-v\">\n          </div>\n\n        </div>\n      </div>\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtCodigo-b-v\">C. Costo:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <ng-select [items]=\"ccostos\" bindLabel=\"nomcc\" bindValue=\"centrocostoId\" placeholder=\"Seleccione\">\n            </ng-select>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>F. Inicio:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"input-group\">\n              <input class=\"form-control\" placeholder=\"dd/mm/yyyy\" name=\"fInicio\" [(ngModel)]=\"fechaInicio\" ngbDatepicker #fIni=\"ngbDatepicker\">\n              <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fIni.toggle()\" type=\"button\">\n                  <img src=\"assets/img/calendar-icon.svg\" />\n                </button>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>F. Fin:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"input-group\">\n              <input class=\"form-control\" placeholder=\"dd/mm/yyyy\" name=\"fFin\" [(ngModel)]=\"fechaFin\" ngbDatepicker #fFin=\"ngbDatepicker\">\n              <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fFin.toggle()\" type=\"button\">\n                  <img src=\"assets/img/calendar-icon.svg\" />\n                </button>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <button type=\"button\" (click)=\"loadSolicitudes()\" class=\"btn btn-primary btn-md btn-block\">Buscar</button>\n          </div>\n\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n</div>\n\n<div class=\"table-responsive\">\n    <ngx-loading [show]=\"loadingSolicitudes\" [config]=\"{ }\"></ngx-loading>\n  <table class=\"table table-striped\" [mfData]=\"data\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n    <thead class=\"thead-dark\">\n      <tr>\n        <th>\n          <mfDefaultSorter by=\"name\">Código</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"email\">Comisionado (cargo)</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"age\">Dni</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">Centro costo</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">Destino</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">F. Inicio</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">F. Fin</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">&nbsp;</mfDefaultSorter>\n        </th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let item of mf.data\">\n        <td>{{item.solicitudviaticosId}}</td>\n        <td>{{item.empleadoComisionado.apellido}} {{item.empleadoComisionado.nombre}}<br><small>{{item.empleadoComisionado.categoria.nomcategoria}}</small></td>\n        <td>{{item.empleadoComisionado.numerodocuento}}</td>\n        <td>{{item.empleadoComisionado.area.centrocosto.nomcc}}</td>\n        <td>{{item.destino.nomdestino}}</td>\n        <td>{{item.fecinicio}}</td>\n        <td>{{item.fecfin}}</td>\n        <td style=\"text-align: center;\"><a routerLink=\"/asignar-viaticos/{{item.solicitudviaticosId}}\" class=\"btn btn-success btn-sm\">Asignar</a></td>\n      </tr>\n    </tbody>\n    <tfoot>\n      <tr>\n        <td colspan=\"8\" style=\"text-align: center;\">\n          <mfBootstrapPaginator></mfBootstrapPaginator>\n        </td>\n      </tr>\n    </tfoot>\n  </table>\n</div>"
+module.exports = "<div class=\"card bg-gris-light panel-border-gris\">\n  <div class=\"card-body card-body-contenedor-busqueda\">\n\n    <div class=\"form-group\">\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label for=\"txtCodigo-b-v\">Código:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input [(ngModel)] = \"solicitudviaticosId\" type=\"text\" class=\"form-control\" >\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>DNI:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <input [(ngModel)] = \"numDni\" type=\"text\" class=\"form-control\" >\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>Nombre:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-5 col-lg-5\">\n            <input [(ngModel)] = \"nombreCompleto\" type=\"text\" class=\"form-control\">\n          </div>\n\n        </div>\n      </div>\n\n      <div class=\"row-contenedor\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>C. Costo:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n            <ng-select [(ngModel)] = \"codCentroCosto\" [items]=\"ccostos\" bindLabel=\"nomcc\" bindValue=\"nomcc\" placeholder=\"Seleccione\">\n            </ng-select>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>F. Inicio:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"input-group\">\n              <input  class=\"form-control\" name=\"fInicio\" [(ngModel)]=\"strFechaInicio\" ngbDatepicker #fIni=\"ngbDatepicker\">\n              <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fIni.toggle()\" type=\"button\">\n                  <img src=\"assets/img/calendar-icon.svg\" />\n                </button>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n            <label>F. Fin:</label>\n          </div>\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <div class=\"input-group\">\n              <input class=\"form-control\" name=\"fFin\" [(ngModel)]=\"strFechaFin\" ngbDatepicker #fFin=\"ngbDatepicker\">\n              <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fFin.toggle()\" type=\"button\">\n                  <img src=\"assets/img/calendar-icon.svg\" />\n                </button>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n            <button type=\"button\" (click)=\"loadSolicitudes()\" class=\"btn btn-primary btn-md btn-block\">Buscar</button>\n          </div>\n\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n</div>\n\n<div class=\"table-responsive\">\n    <ngx-loading [show]=\"loadingSolicitudes\" [config]=\"{ }\"></ngx-loading>\n  <table class=\"table table-striped\" [mfData]=\"data\" #mf=\"mfDataTable\" [mfRowsOnPage]=\"10\">\n    <thead class=\"thead-dark\">\n      <tr>\n        <th>\n          <mfDefaultSorter by=\"name\">Código</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"email\">Comisionado (cargo)</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"age\">Dni</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">Centro costo</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">Destino</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">F. Inicio</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">F. Fin</mfDefaultSorter>\n        </th>\n        <th>\n          <mfDefaultSorter by=\"city\">&nbsp;</mfDefaultSorter>\n        </th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let item of mf.data\">\n        <td>{{item.solicitudviaticosId}}</td>\n        <td>{{item.empleadoComisionado.apellido}} {{item.empleadoComisionado.nombre}}<br><small>{{item.empleadoComisionado.categoria.nomcategoria}}</small></td>\n        <td>{{item.empleadoComisionado.numerodocuento}}</td>\n        <td>{{item.empleadoComisionado.area.centrocosto.nomcc}}</td>\n        <td>{{item.destino.nomdestino}}</td>\n        <td>{{item.fecinicio}}</td>\n        <td>{{item.fecfin}}</td>\n        <td style=\"text-align: center;\"><a routerLink=\"/asignar-viaticos/{{item.solicitudviaticosId}}\" class=\"btn btn-success btn-sm\">Asignar</a></td>\n      </tr>\n    </tbody>\n    <tfoot>\n      <tr>\n        <td colspan=\"8\" style=\"text-align: center;\">\n          <mfBootstrapPaginator></mfBootstrapPaginator>\n        </td>\n      </tr>\n    </tfoot>\n  </table>\n</div>"
 
 /***/ }),
 
@@ -416,19 +615,58 @@ var AsignarViaticoComponent = /** @class */ (function () {
         this.apiService = apiService;
         this.loadingSolicitudes = false;
         this.ccostos = [];
+        this.solicitudviaticosId = '';
+        this.numDni = '';
+        this.codCentroCosto = null;
+        this.strFechaInicio = '';
+        this.strFechaFin = '';
+        this.nombreCompleto = '';
         this.data = [];
     }
     AsignarViaticoComponent.prototype.ngOnInit = function () {
         this.loadSolicitudes();
         this.cargarCatalogos('ccostos');
     };
+    AsignarViaticoComponent.prototype.setParameterListarSolicitudes = function () {
+        //   solicitudviaticosId = '';
+        // numDni = '';
+        // codCentroCosto = '';
+        // strFechaInicio = '';
+        // strFechaFin = '';
+        // nombreCompleto = '';
+        var params = {};
+        if (this.solicitudviaticosId) {
+            params['solicitudviaticosId'] = this.solicitudviaticosId;
+        }
+        if (this.numDni) {
+            params['numDni'] = this.numDni;
+        }
+        if (this.nombreCompleto) {
+            params['nombreCompleto'] = this.nombreCompleto;
+        }
+        if (this.codCentroCosto) {
+            params['codCentroCosto'] = this.codCentroCosto;
+        }
+        if (this.strFechaInicio) {
+            params['strFechaInicio'] = this.formatoFechaBusqueda(this.strFechaInicio);
+        }
+        if (this.strFechaFin) {
+            params['strFechaFin'] = this.formatoFechaBusqueda(this.strFechaFin);
+        }
+        return params;
+    };
+    AsignarViaticoComponent.prototype.formatoFechaBusqueda = function (dateData) {
+        return dateData.year + '-' + (dateData.month < 10 ? '0' + dateData.month : dateData.month) + '-' + (dateData.day < 10 ? '0' + dateData.day : dateData.day);
+    };
     AsignarViaticoComponent.prototype.loadSolicitudes = function () {
         var _this = this;
         this.loadingSolicitudes = true;
-        this.apiService.listarSolicitudes({})
+        this.apiService.listarSolicitudes(this.setParameterListarSolicitudes())
             .subscribe(function (response) {
             _this.loadingSolicitudes = false;
             _this.data = response.data;
+        }, function (error) {
+            _this.loadingSolicitudes = false;
         });
     };
     AsignarViaticoComponent.prototype.cargarCatalogos = function (catalogoName) {
@@ -777,7 +1015,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <ngx-loading [show]=\"loadingRegistro\" [config]=\"{ }\"></ngx-loading>\n\n  <form [formGroup]=\"angularForm\" novalidate>\n\n    <div class=\"card bg-gris-light panel-border-gris\">\n      <div class=\"card-body card-body-contenedor-form-fields\">\n        <ngx-loading [show]=\"loadingComisionado\" [config]=\"{ }\"></ngx-loading>\n        <div class=\"form-group\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-4 col-lg-2 label-form\">\n              <label>DNI:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n              <div class=\"input-group\">\n                <input formControlName=\"dniBusquedaComisionado\" type=\"text\" [(ngModel)]=\"txtDni\" class=\"form-control\">\n                <div class=\"input-group-append\">\n                  <button class=\" btn btn-primary\" (click)=\"buscarComisionado()\">Buscar</button>\n                </div>\n              </div>\n              <div *ngIf=\"angularForm.controls['dniBusquedaComisionado'].invalid && (angularForm.controls['dniBusquedaComisionado'].dirty || angularForm.controls['dniBusquedaComisionado'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['dniBusquedaComisionado'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n            <div *ngIf=\"panelBusquedaComisionado\" class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              <label>Nombre comisionado:</label>\n            </div>\n            <div *ngIf=\"panelBusquedaComisionado\" class=\"col-12 col-sm-12 col-md-5 col-lg-5\">\n              <input type=\"text\" value=\"{{empleadoComisionado.apellido}} {{empleadoComisionado.nombre}}\" class=\"form-control\" disabled>\n            </div>\n          </div>\n          <div *ngIf=\"panelBusquedaComisionado\">\n            <div class=\"row-contenedor\">\n              <div class=\"row\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>DNI del comisionado:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.numerodocuento}}\">\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Centro de costo:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.area?.centrocosto?.nomcc}}\">\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n                  <label>Categoría:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.categoria?.nomcategoria}}\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row-contenedor\">\n              <div class=\"row\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Área:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.area?.nomarea}}\">\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n      <div class=\"card-body\">\n        <div class=\"row-contenedor\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              <label>Tipo de comision:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-4 col-lg-4 form-group margin-bottom-0\">\n              <ng-select [(ngModel)]=\"tComisionValue\" formControlName=\"comisionesCmb\" [items]=\"tcomisiones\" bindLabel=\"nomcomision\" bindValue=\"tipocomisionId\"\n                placeholder=\"Seleccione\">\n              </ng-select>\n              <div *ngIf=\"angularForm.controls['comisionesCmb'].invalid && (angularForm.controls['comisionesCmb'].dirty || angularForm.controls['comisionesCmb'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['comisionesCmb'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n              <label>Destino:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n              <ng-select [(ngModel)]=\"destinoValue\" formControlName=\"destinoCmb\" (change)=\"seleccionarDestino($event)\" [items]=\"destinos\"\n                bindLabel=\"nomdestino\" bindValue=\"destinoId\" placeholder=\"Seleccione\">\n              </ng-select>\n              <div *ngIf=\"angularForm.controls['destinoCmb'].invalid && (angularForm.controls['destinoCmb'].dirty || angularForm.controls['destinoCmb'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['destinoCmb'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n              <div class=\"form-check form-checked-form\">\n                <label class=\"form-check-label\">\n                  <input class=\"form-check-input\" disabled [checked]=\"disabledZonaCritica\" type=\"checkbox\">\n                  <span>Zona critica</span>\n                </label>\n              </div>\n            </div>\n\n          </div>\n\n          <div class=\"row-contenedor\">\n            <div class=\"row\">\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                <label>Fecha inicio:</label>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n                <div class=\"input-group\">\n                  <input class=\"form-control\" formControlName=\"fechaInicial\" (dateSelect)=\"seleccionarFechas($event)\" name=\"fInicio\" [(ngModel)]=\"fechaInicio\"\n                    ngbDatepicker #fIni=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fIni.toggle()\" type=\"button\">\n                      <img src=\"assets/img/calendar-icon.svg\" />\n                    </button>\n                  </div>\n                </div>\n                <div *ngIf=\"angularForm.controls['fechaInicial'].invalid && (angularForm.controls['fechaInicial'].dirty || angularForm.controls['fechaInicial'].touched)\"\n                  class=\"alert alert-primary error-msg-alert\">\n                  <div *ngIf=\"angularForm.controls['fechaInicial'].errors.required\">\n                    Falta ingresar.\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                <label>Fecha Fin:</label>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n                <div class=\"input-group\">\n                  <input class=\"form-control\" formControlName=\"fechaFinal\" (dateSelect)=\"seleccionarFechas($event)\" name=\"fFin\" [(ngModel)]=\"fechaFin\"\n                    ngbDatepicker #fFin=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fFin.toggle()\" type=\"button\">\n                      <img src=\"assets/img/calendar-icon.svg\" />\n                    </button>\n                  </div>\n                </div>\n                <div *ngIf=\"angularForm.controls['fechaFinal'].invalid && (angularForm.controls['fechaFinal'].dirty || angularForm.controls['fechaFinal'].touched)\"\n                  class=\"alert alert-primary error-msg-alert\">\n                  <div *ngIf=\"angularForm.controls['fechaFinal'].errors.required\">\n                    Falta ingresar.\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                <div *ngIf=\"showMsgDias\" class=\"alert alert-{{successDias}} info-diferencia-dias\">\n                  <strong>Duracion:</strong> {{msgDias}}.\n                </div>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"showMsg1Dia\">\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                &nbsp;\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                <div class=\"form-check form-checked-form\">\n                  <label class=\"form-check-label\">\n                    <input class=\"form-check-input\" id=\"chkMayor6Horas\" (change)=\"validarMayor6Horas()\" type=\"checkbox\">\n                    <span>Mayor a 6 horas</span>\n                  </label>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\" *ngIf=\"showPernocta\">\n                <div class=\"form-check form-checked-form\">\n                  <label class=\"form-check-label\">\n                    <input class=\"form-check-input\" id=\"chkPernocta\" type=\"checkbox\" (change)=\"setPernocta()\">\n                    <span>Pernocta</span>\n                  </label>\n                </div>\n              </div>\n            </div>\n            <div class=\"row-contenedor\">\n              <div class=\"row form-group margin-bottom-0\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Motivo comisión:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                  <textarea [(ngModel)]=\"motivocomision\" class=\"form-control\" formControlName=\"motivo\" rows=\"3\"></textarea>\n                  <div *ngIf=\"angularForm.controls['motivo'].invalid && (angularForm.controls['motivo'].dirty || angularForm.controls['motivo'].touched)\"\n                    class=\"alert alert-primary error-msg-alert\">\n                    <div *ngIf=\"angularForm.controls['motivo'].errors.required\">\n                      Falta ingresar.\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"card-footer text-center panel-border-top-gris\">\n        <button type=\"button\" (click)=\"registrarSolicitud()\" class=\"btn btn-success margin-right-10 btn-actions-form\">Registrar</button>\n        <button type=\"button\" (click)=\"cancelar()\" class=\"btn btn-primary margin-right-10 btn-actions-form\">Cancelar</button>\n        <a routerLink=\"/\" class=\"btn btn-danger btn-actions-form\">Salir</a>\n      </div>\n    </div>\n  </form>\n\n  <swal #alertResponse title=\"{{titleSwal}}\" text=\"{{msgSwal}}\" type=\"{{typeSwal}}\" [showCancelButton]=\"false\" [focusCancel]=\"false\">\n  </swal>\n\n</div>"
+module.exports = "<div>\n  <ngx-loading [show]=\"loadingRegistro\" [config]=\"{ }\"></ngx-loading>\n\n  <form [formGroup]=\"angularForm\" novalidate>\n\n    <div class=\"card bg-gris-light panel-border-gris\">\n      <div class=\"card-body card-body-contenedor-form-fields\">\n        <ngx-loading [show]=\"loadingComisionado\" [config]=\"{ }\"></ngx-loading>\n        <div class=\"form-group\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-4 col-lg-2 label-form\">\n              <label>DNI:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n              <div class=\"input-group\">\n                <input formControlName=\"dniBusquedaComisionado\" type=\"text\" [(ngModel)]=\"txtDni\" class=\"form-control\">\n                <div class=\"input-group-append\">\n                  <button class=\" btn btn-primary\" (click)=\"buscarComisionado()\">Buscar</button>\n                </div>\n              </div>\n              <div *ngIf=\"angularForm.controls['dniBusquedaComisionado'].invalid && (angularForm.controls['dniBusquedaComisionado'].dirty || angularForm.controls['dniBusquedaComisionado'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['dniBusquedaComisionado'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n            <div *ngIf=\"panelBusquedaComisionado\" class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              <label>Nombre comisionado:</label>\n            </div>\n            <div *ngIf=\"panelBusquedaComisionado\" class=\"col-12 col-sm-12 col-md-5 col-lg-5\">\n              <input type=\"text\" value=\"{{empleadoComisionado.apellido}} {{empleadoComisionado.nombre}}\" class=\"form-control\" disabled>\n            </div>\n          </div>\n          <div *ngIf=\"panelBusquedaComisionado\">\n            <div class=\"row-contenedor\">\n              <div class=\"row\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>DNI del comisionado:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.numerodocuento}}\">\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Centro de costo:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.area?.centrocosto?.nomcc}}\">\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n                  <label>Categoría:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-3 col-lg-3\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.categoria?.nomcategoria}}\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row-contenedor\">\n              <div class=\"row\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Área:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                  <input type=\"text\" class=\"form-control\" disabled value=\"{{empleadoComisionado.area?.nomarea}}\">\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"card margin-top-10 bg-gris-light panel-border-gris\">\n      <div class=\"card-body\">\n        <div class=\"row-contenedor\">\n          <div class=\"row\">\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n              <label>Tipo de comision:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-4 col-lg-4 form-group margin-bottom-0\">\n              <ng-select [(ngModel)]=\"tComisionValue\" formControlName=\"comisionesCmb\" [items]=\"tcomisiones\" bindLabel=\"nomcomision\" bindValue=\"tipocomisionId\"\n                placeholder=\"Seleccione\">\n              </ng-select>\n              <div *ngIf=\"angularForm.controls['comisionesCmb'].invalid && (angularForm.controls['comisionesCmb'].dirty || angularForm.controls['comisionesCmb'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['comisionesCmb'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-1 col-lg-1 label-form\">\n              <label>Destino:</label>\n            </div>\n            <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n              <ng-select [(ngModel)]=\"destinoValue\" formControlName=\"destinoCmb\" (change)=\"seleccionarDestino($event)\" [items]=\"destinos\"\n                bindLabel=\"nomdestino\" bindValue=\"destinoId\" placeholder=\"Seleccione\">\n              </ng-select>\n              <div *ngIf=\"angularForm.controls['destinoCmb'].invalid && (angularForm.controls['destinoCmb'].dirty || angularForm.controls['destinoCmb'].touched)\"\n                class=\"alert alert-primary error-msg-alert\">\n                <div *ngIf=\"angularForm.controls['destinoCmb'].errors.required\">\n                  Falta ingresar.\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n              <div class=\"form-check form-checked-form\">\n                <label class=\"form-check-label\">\n                  <input class=\"form-check-input\" disabled [checked]=\"disabledZonaCritica\" type=\"checkbox\">\n                  <span>Zona critica</span>\n                </label>\n              </div>\n            </div>\n\n          </div>\n\n          <div class=\"row-contenedor\">\n            <div class=\"row\">\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                <label>Fecha inicio:</label>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n                <div class=\"input-group\">\n                  <input class=\"form-control\" formControlName=\"fechaInicial\" (dateSelect)=\"seleccionarFechas($event)\" name=\"fInicio\" [(ngModel)]=\"fechaInicio\"\n                    ngbDatepicker #fIni=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fIni.toggle()\" type=\"button\">\n                      <img src=\"assets/img/calendar-icon.svg\" />\n                    </button>\n                  </div>\n                </div>\n                <div *ngIf=\"angularForm.controls['fechaInicial'].invalid && (angularForm.controls['fechaInicial'].dirty || angularForm.controls['fechaInicial'].touched)\"\n                  class=\"alert alert-primary error-msg-alert\">\n                  <div *ngIf=\"angularForm.controls['fechaInicial'].errors.required\">\n                    Falta ingresar.\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                <label>Fecha Fin:</label>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-3 col-lg-3 form-group margin-bottom-0\">\n                <div class=\"input-group\">\n                  <input class=\"form-control\" formControlName=\"fechaFinal\" (dateSelect)=\"seleccionarFechas($event)\" name=\"fFin\" [(ngModel)]=\"fechaFin\"\n                    ngbDatepicker #fFin=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary btn-toogle-datepicker\" (click)=\"fFin.toggle()\" type=\"button\">\n                      <img src=\"assets/img/calendar-icon.svg\" />\n                    </button>\n                  </div>\n                </div>\n                <div *ngIf=\"angularForm.controls['fechaFinal'].invalid && (angularForm.controls['fechaFinal'].dirty || angularForm.controls['fechaFinal'].touched)\"\n                  class=\"alert alert-primary error-msg-alert\">\n                  <div *ngIf=\"angularForm.controls['fechaFinal'].errors.required\">\n                    Falta ingresar.\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                <div *ngIf=\"showMsgDias\" class=\"alert alert-{{successDias}} info-diferencia-dias\">\n                  <strong>Duracion:</strong> {{msgDias}}.\n                </div>\n              </div>\n            </div>\n\n            <div class=\"row\" *ngIf=\"isMasDe5\" >\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                &nbsp;\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                  <div class=\"alert alert-dismissible alert-primary text-center\">\n                      <strong>Los viáticos a partir del sexto día cubren solo 60% de gastos</strong>\n                    </div>\n                </div>\n              \n            </div>\n            \n            <div class=\"row\" *ngIf=\"showMsg1Dia\">\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                &nbsp;\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\">\n                <div class=\"form-check form-checked-form\">\n                  <label class=\"form-check-label\">\n                    <input class=\"form-check-input\" id=\"chkMayor6Horas\" (change)=\"validarMayor6Horas()\" type=\"checkbox\">\n                    <span>Mayor a 6 horas</span>\n                  </label>\n                </div>\n              </div>\n              <div class=\"col-12 col-sm-12 col-md-2 col-lg-2\" *ngIf=\"showPernocta\">\n                <div class=\"form-check form-checked-form\">\n                  <label class=\"form-check-label\">\n                    <input class=\"form-check-input\" checked id=\"chkPernocta\" type=\"checkbox\" (change)=\"setPernocta()\">\n                    <span>Pernocta</span>\n                  </label>\n                </div>\n              </div>\n            </div>\n            <div class=\"row-contenedor\">\n              <div class=\"row form-group margin-bottom-0\">\n                <div class=\"col-12 col-sm-12 col-md-2 col-lg-2 label-form\">\n                  <label>Motivo comisión:</label>\n                </div>\n                <div class=\"col-12 col-sm-12 col-md-10 col-lg-10\">\n                  <textarea [(ngModel)]=\"motivocomision\" class=\"form-control\" formControlName=\"motivo\" rows=\"3\"></textarea>\n                  <div *ngIf=\"angularForm.controls['motivo'].invalid && (angularForm.controls['motivo'].dirty || angularForm.controls['motivo'].touched)\"\n                    class=\"alert alert-primary error-msg-alert\">\n                    <div *ngIf=\"angularForm.controls['motivo'].errors.required\">\n                      Falta ingresar.\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"card-footer text-center panel-border-top-gris\">\n        <button type=\"button\" (click)=\"registrarSolicitud()\" class=\"btn btn-success margin-right-10 btn-actions-form\">Registrar</button>\n        <button type=\"button\" (click)=\"cancelar()\" class=\"btn btn-primary margin-right-10 btn-actions-form\">Cancelar</button>\n        <a routerLink=\"/\" class=\"btn btn-danger btn-actions-form\">Salir</a>\n      </div>\n    </div>\n  </form>\n\n  <swal #alertResponse title=\"{{titleSwal}}\" text=\"{{msgSwal}}\" type=\"{{typeSwal}}\" [showCancelButton]=\"false\" [focusCancel]=\"false\">\n  </swal>\n\n</div>"
 
 /***/ }),
 
@@ -835,6 +1073,7 @@ var SolicitarViaticoComponent = /** @class */ (function () {
         this.msgDias = '';
         this.successDias = 'success';
         this.showMsg1Dia = false;
+        this.isMasDe5 = false;
         this.isMayor6Horas = false;
         this.showPernocta = false;
         this.isPernocta = false;
@@ -908,10 +1147,12 @@ var SolicitarViaticoComponent = /** @class */ (function () {
             _this.panelBusquedaComisionado = true;
             _this.loadingComisionado = false;
         }, function (error) {
-            _this.showDialog('Error', 'Trabajador no existe.', 'warning');
             _this.empleadoComisionado = {};
             _this.panelBusquedaComisionado = false;
             _this.loadingComisionado = false;
+            if (error && error.error && error.error.message) {
+                _this.showDialog('Error', error.error.message, 'warning');
+            }
         });
     };
     SolicitarViaticoComponent.prototype.seleccionarDestino = function ($event) {
@@ -925,13 +1166,15 @@ var SolicitarViaticoComponent = /** @class */ (function () {
     SolicitarViaticoComponent.prototype.seleccionarFechas = function ($event) {
         this.showMsgDias = false;
         this.showMsg1Dia = false;
+        this.isMasDe5 = false;
         if (this.fechaInicio && this.fechaFin) {
             var diasDif = this.diferenciasDias(this.fechaFin, this.fechaInicio);
             if (diasDif > 5) {
                 this.showMsgDias = true;
                 this.msgDias = diasDif + (diasDif == 1 ? ' día' : ' días');
                 this.successDias = 'primary';
-                this.showDialog('Advertencia', 'Los viáticos a partir del sexto día cubren solo 60% de gastos', 'warning');
+                this.isMasDe5 = true;
+                //this.showDialog('Advertencia', 'Los viáticos a partir del sexto día cubren solo 60% de gastos', 'warning');
             }
             else if (diasDif > 0 && diasDif <= 5) {
                 this.showMsgDias = true;
@@ -1055,6 +1298,11 @@ var SolicitarViaticoComponent = /** @class */ (function () {
                     _this.loadingRegistro = false;
                     _this.cancelar();
                     _this.showDialog('Exito', 'La Solicitud de viático N° ' + data.solicitudviaticosId + ', se registró correctamente.', 'success');
+                }, function (error) {
+                    _this.loadingRegistro = false;
+                    if (error && error.error && error.error.message) {
+                        _this.showDialog('Error', error.error.message, 'error');
+                    }
                 });
             }
         }
@@ -1277,7 +1525,7 @@ var routes = [
     { path: 'solicitar-viaticos', component: _components_solicitar_viatico_solicitar_viatico_component__WEBPACK_IMPORTED_MODULE_2__["SolicitarViaticoComponent"] },
     { path: 'asignar-viaticos', component: _components_asignar_viatico_asignar_viatico_component__WEBPACK_IMPORTED_MODULE_3__["AsignarViaticoComponent"] },
     { path: 'rendir-gastos', component: _components_rendir_gastos_rendir_gastos_component__WEBPACK_IMPORTED_MODULE_4__["RendirGastosComponent"] },
-    { path: 'asignar-viaticos/:viatico', component: _components_asignar_viatico_form_asignar_viatico_form_component__WEBPACK_IMPORTED_MODULE_6__["AsignarViaticoFormComponent"] },
+    { path: 'asignar-viaticos/:idsolicitud', component: _components_asignar_viatico_form_asignar_viatico_form_component__WEBPACK_IMPORTED_MODULE_6__["AsignarViaticoFormComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1307,7 +1555,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiServiceService", function() { return ApiServiceService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1319,14 +1566,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' })
 };
 var ApiServiceService = /** @class */ (function () {
     function ApiServiceService(http) {
         this.http = http;
-        //http://localhost:8082/sisvia-provider/api/empleado/45124578
         this.apiUrl = 'http://localhost:8082/sisvia-provider/api/';
     }
     ApiServiceService.prototype.obtenerEmpleadoPorDni = function (dni) {
@@ -1341,14 +1586,14 @@ var ApiServiceService = /** @class */ (function () {
     ApiServiceService.prototype.listarSolicitudes = function (solicitud) {
         return this.http.post(this.apiUrl + 'viatico/solicitudes', solicitud, httpOptions);
     };
-    ApiServiceService.prototype.handleError = function (operation, result) {
-        if (operation === void 0) { operation = 'operation'; }
-        return function (error) {
-            // TODO: send the error to remote logging infrastructure
-            alert(error); // log to console instead
-            // Let the app keep running by returning an empty result.
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(result);
-        };
+    ApiServiceService.prototype.obtenerSolicitudPorId = function (id) {
+        return this.http.get(this.apiUrl + 'viatico/solicitudes/' + id);
+    };
+    ApiServiceService.prototype.calcularMonto = function () {
+        return this.http.get(this.apiUrl + 'viatico/calcularMonto');
+    };
+    ApiServiceService.prototype.asignarViatico = function (asignacion) {
+        return this.http.post(this.apiUrl + 'viatico/asignacion', asignacion, httpOptions);
     };
     ApiServiceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
