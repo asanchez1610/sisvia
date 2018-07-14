@@ -104,6 +104,17 @@ public class Solicitudviatico implements Serializable {
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Tipocomision tipocomision;
 
+	@Column(name = "ESTADO")
+	private String estado;
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 	public Solicitudviatico() {
 	}
 

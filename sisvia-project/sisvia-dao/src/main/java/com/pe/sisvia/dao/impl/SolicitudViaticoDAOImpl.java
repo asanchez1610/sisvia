@@ -15,6 +15,7 @@ import com.pe.sisvia.dao.SolicitudViaticoDAO;
 import com.pe.sisvia.model.Solicitudviatico;
 import com.pe.sisvia.model.Tarjetacorporativa;
 import com.pe.sisvia.model.Tipocomision;
+import com.pe.sisvia.util.Constantes;
 
 @Repository
 public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
@@ -60,7 +61,7 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 			sql+=" AND upper(s.empleadoComisionado.nombre || ' ' ||s.empleadoComisionado.apellido) like upper('%"+solicitud.getNombreCompleto()+"%') ";
 		}
 		
-		sql+=" ORDER BY s.solicitudviaticosId DESC ";
+		sql+=" AND s.estado = '"+Constantes.ESTADO_AUTHORIZED+"' ORDER BY s.solicitudviaticosId DESC ";
 		TypedQuery<Solicitudviatico> query = em.createQuery(sql, Solicitudviatico.class);	
 		
 		if( solicitud.getSolicitudviaticosId() != null ) {

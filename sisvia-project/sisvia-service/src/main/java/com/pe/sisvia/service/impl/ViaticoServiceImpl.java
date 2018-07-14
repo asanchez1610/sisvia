@@ -24,6 +24,7 @@ import com.pe.sisvia.model.Tarjetacorporativa;
 import com.pe.sisvia.model.Viatico;
 import com.pe.sisvia.model.vo.AsignacionRequestVo;
 import com.pe.sisvia.service.ViaticoService;
+import com.pe.sisvia.util.Constantes;
 import com.pe.sisvia.ws.client.Cliente;
 
 @Service
@@ -51,8 +52,8 @@ public class ViaticoServiceImpl implements ViaticoService {
 			try {
 				solicitud.setFecinicio(formatter.parse(solicitud.getStrFechaInicio()));
 				solicitud.setFecfin(formatter.parse(solicitud.getStrFechaFin()));
+				solicitud.setEstado(Constantes.ESTADO_AUTHORIZED);
 			} catch (ParseException e) {
-				e.printStackTrace();
 			}
 			solicitud.setFecautoriza(new Date());
 			solicitud.setFecregistro(new Date());
@@ -74,11 +75,11 @@ public class ViaticoServiceImpl implements ViaticoService {
 			Tarjetacorporativa tarjeta = tarjetaCorporativaDAO.obtenerPorViatico(viatico.getViaticoId());
 			tarjeta.setViatico(null);
 			viatico.setTarjetaCorporativa(tarjeta);
-			viatico.setConceptosAsignados(conceptoAsignadoDAO.listarConceptosAsignadosPorViatico(viatico.getViaticoId()));
+			viatico.setConceptosAsignados(
+					conceptoAsignadoDAO.listarConceptosAsignadosPorViatico(viatico.getViaticoId()));
 			solicitud.setViatico(viatico);
-			
-		}catch (Exception e) {
-			e.printStackTrace();
+
+		} catch (Exception e) {
 		}
 		return solicitud;
 	}
@@ -90,8 +91,6 @@ public class ViaticoServiceImpl implements ViaticoService {
 	public Map<String, Object> consultarTC() throws IOException {
 		return cliente.consultarTC();
 	}
-	
-	
 
 	@SuppressWarnings("unchecked")
 	@Transactional(rollbackFor = Exception.class)
@@ -148,10 +147,13 @@ public class ViaticoServiceImpl implements ViaticoService {
 			throw new Exception("Error al registrar la asignacion");
 		}
 
+		solicitud.setEstado(Constantes.ESTADO_ASSIGNED);
+		solicitudViaticoDAO.grabar(solicitud);
+
 		return data;
 	}
 
-	@Transactional(rollbackFor = Exception.class, propagation=Propagation.REQUIRES_NEW)
+	@Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
 	public void registrarConceptoAsignado(Conceptoasignado concepto) throws Exception {
 		conceptoAsignadoDAO.grabar(concepto);
 	}
