@@ -48,14 +48,14 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 			sql+=" AND s.empleadoComisionado.area.centrocosto.nomcc = :ccosto  ";
 		}
 		
-//		if(solicitud.getStrFechaInicio() != null) {
-//			sql+=" AND s.fecinicio >= '"+solicitud.getStrFechaInicio()+"'  ";
-//		}
-//		
-//		if(solicitud.getStrFechaFin() != null) {
-//			sql+=" AND s.fecinicio <= :fFin  ";
-//		}
+		if(solicitud.getStrFechaInicio() != null) {
+			sql+=" AND s.fecinicio >= TO_DATE('"+solicitud.getStrFechaInicio()+"', 'yyyy-mm-dd')  ";
+		}
 		
+		if(solicitud.getStrFechaFin() != null) {
+			sql+=" AND s.fecfin <= TO_DATE('"+solicitud.getStrFechaFin()+"', 'yyyy-mm-dd')  ";
+		}
+
 		if(solicitud.getNombreCompleto() != null) {
 			sql+=" AND upper(s.empleadoComisionado.nombre || ' ' ||s.empleadoComisionado.apellido) like upper('%"+solicitud.getNombreCompleto()+"%') ";
 		}
@@ -75,20 +75,6 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 			query.setParameter("ccosto", solicitud.getCodCentroCosto());
 		}
 		
-//		SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-mm-DD");
-//		if( solicitud.getStrFechaInicio() != null ) {
-//			try {
-//				Date dateIni = (Date)formatter1.parse(solicitud.getStrFechaInicio());
-//				query.setParameter("fInicio", dateIni);
-//			} catch (ParseException e) {}
-//		}
-		
-//		if( solicitud.getStrFechaFin() != null ) {
-//			try {
-//				Date dateFin = (Date)formatter1.parse(solicitud.getStrFechaFin());
-//				query.setParameter("fFin", dateFin);
-//			} catch (ParseException e) {}
-//		}
 
 		List<Solicitudviatico> list = query.getResultList();
 		
