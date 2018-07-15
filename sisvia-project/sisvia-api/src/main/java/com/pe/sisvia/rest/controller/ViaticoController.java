@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -63,6 +64,21 @@ public class ViaticoController {
 		try {
 			Solicitudviatico solicitud = viaticoService.obtenerSolicitudPorId(id);
 			ResponseEntity response = ResponseEntity.ok().cacheControl(CacheControl.noCache()).body(solicitud);
+			return response;	
+		}catch (Exception e) {
+			ErrorResponse error = new ErrorResponse();
+			error.setMessage("No se pudo obtener la información.");
+			return ResponseEntity.badRequest().cacheControl(CacheControl.noCache()).body(error);
+		}
+	}
+	
+	@PostMapping(path = ViaticoController.context+"solicitud/anular", produces = MediaType.APPLICATION_JSON_VALUE, consumes =  MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity anularSolicitud(@RequestBody Solicitudviatico solicitud) {
+		try {
+			Map<String, Object> data = new HashMap<>();
+			viaticoService.anularSolicitud(solicitud);
+			data.put("success", Boolean.TRUE);
+			ResponseEntity response = ResponseEntity.ok().cacheControl(CacheControl.noCache()).body(data);
 			return response;	
 		}catch (Exception e) {
 			ErrorResponse error = new ErrorResponse();

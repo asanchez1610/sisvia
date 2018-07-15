@@ -158,4 +158,12 @@ public class ViaticoServiceImpl implements ViaticoService {
 		conceptoAsignadoDAO.grabar(concepto);
 	}
 
+	@Transactional
+	public void anularSolicitud(Solicitudviatico solicitud) {
+		Solicitudviatico solicitudAnular = solicitudViaticoDAO.obtenerId(solicitud.getSolicitudviaticosId());
+		solicitudAnular.setEstado(Constantes.ESTADO_CANCELLED);
+		solicitudAnular.setMotivorechazo(solicitud.getMotivorechazo());
+		solicitudViaticoDAO.grabar(solicitudAnular);
+	}
+
 }

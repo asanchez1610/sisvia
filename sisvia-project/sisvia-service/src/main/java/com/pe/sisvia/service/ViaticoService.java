@@ -24,4 +24,6 @@ public interface ViaticoService {
 	
 	public void registrarConceptoAsignado(Conceptoasignado concepto)  throws Exception;
 	
+	public void anularSolicitud(Solicitudviatico solicitud);
+	
 }
