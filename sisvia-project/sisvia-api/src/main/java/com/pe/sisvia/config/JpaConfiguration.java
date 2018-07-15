@@ -59,7 +59,9 @@ public class JpaConfiguration {
 	private Properties jpaProperties() {
 		Properties properties = new Properties();
 		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
-		properties.put("hibernate.show_sql", true);
+		//Si esta en true show sql se ve en el log las consultas
+		properties.put("hibernate.show_sql", false);
+		//si esta en tru le da formato a el log de consultas (identando salto de linea de los querys)
 		properties.put("hibernate.format_sql", false);
 		return properties;
 	}

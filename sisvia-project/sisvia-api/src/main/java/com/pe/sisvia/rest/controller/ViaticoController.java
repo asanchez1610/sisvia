@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
@@ -29,6 +30,8 @@ public class ViaticoController {
 	@Autowired
 	private ViaticoService viaticoService;
 	
+	Logger LOG = Logger.getLogger(ViaticoController.class);
+	
 	@PostMapping(path = ViaticoController.context+"solicitud", produces = MediaType.APPLICATION_JSON_VALUE, consumes =  MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity registrarSolicitud(@RequestBody Solicitudviatico solicitud) {
 		try {
@@ -36,6 +39,7 @@ public class ViaticoController {
 			ResponseEntity<Solicitudviatico> response = ResponseEntity.ok().cacheControl(CacheControl.noCache()).body(solicitudviatico);
 			return response;	
 		}catch (Exception e) {
+			LOG.error(e);
 			ErrorResponse error = new ErrorResponse();
 			error.setMessage("La solisitud no se pudo registrar.");
 			return ResponseEntity.badRequest().cacheControl(CacheControl.noCache()).body(error);

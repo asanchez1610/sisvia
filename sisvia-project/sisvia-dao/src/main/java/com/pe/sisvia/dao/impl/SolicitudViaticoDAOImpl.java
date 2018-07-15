@@ -1,8 +1,5 @@
 package com.pe.sisvia.dao.impl;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,8 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.pe.sisvia.dao.SolicitudViaticoDAO;
 import com.pe.sisvia.model.Solicitudviatico;
-import com.pe.sisvia.model.Tarjetacorporativa;
-import com.pe.sisvia.model.Tipocomision;
 import com.pe.sisvia.util.Constantes;
 
 @Repository
