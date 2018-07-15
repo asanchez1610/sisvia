@@ -75,6 +75,21 @@ public class ViaticoController {
 		}
 	}
 	
+	@PostMapping(path = ViaticoController.context+"solicitud/anular", produces = MediaType.APPLICATION_JSON_VALUE, consumes =  MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity anularSolicitud(@RequestBody Solicitudviatico solicitud) {
+		try {
+			Map<String, Object> data = new HashMap<>();
+			viaticoService.anularSolicitud(solicitud);
+			data.put("success", Boolean.TRUE);
+			ResponseEntity response = ResponseEntity.ok().cacheControl(CacheControl.noCache()).body(data);
+			return response;	
+		}catch (Exception e) {
+			ErrorResponse error = new ErrorResponse();
+			error.setMessage("No se pudo obtener la información.");
+			return ResponseEntity.badRequest().cacheControl(CacheControl.noCache()).body(error);
+		}
+	}
+	
 	@GetMapping(path = ViaticoController.context+"calcularMonto", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity calcularMonto() {
 		try {

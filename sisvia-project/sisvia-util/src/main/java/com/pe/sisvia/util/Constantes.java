@@ -10,5 +10,6 @@ public class Constantes {
 	public static final String ESTADO_CREATE = "CREATE";
 	public static final String ESTADO_AUTHORIZED = "AUTHORIZED";
 	public static final String ESTADO_ASSIGNED = "ASSIGNED";
+	public static final String ESTADO_CANCELLED = "CANCELLED";
 	
 }
