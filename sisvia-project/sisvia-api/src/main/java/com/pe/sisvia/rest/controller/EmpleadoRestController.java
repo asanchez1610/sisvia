@@ -2,6 +2,7 @@ package com.pe.sisvia.rest.controller;
 
 import java.util.Locale;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.CacheControl;
@@ -29,6 +30,8 @@ public class EmpleadoRestController {
 	@Autowired
 	private MessageSource messageSource;
 	
+	Logger LOG = Logger.getLogger(EmpleadoRestController.class);
+	
 	@GetMapping(path = EmpleadoRestController.context+"{dni}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity obtenerPorDni(@PathVariable String dni) {
 		try {
@@ -36,6 +39,7 @@ public class EmpleadoRestController {
 			ResponseEntity<Empleado> response = ResponseEntity.ok().cacheControl(CacheControl.noCache()).body(empleado);
 			return response;	
 		}catch (Exception e) {
+			LOG.error("Error al consultar empleado por dni", e);
 			ErrorResponse error = new ErrorResponse();
 			error.setMessage(messageSource.getMessage(Mensajes.DNI_EMPLEADO_NO_ENCONTRADO, null, Locale.getDefault()));
 			return ResponseEntity.badRequest().cacheControl(CacheControl.noCache()).body(error);
