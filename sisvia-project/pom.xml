@@ -211,25 +211,22 @@
 
 
 		<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
-		<dependency>
-			<groupId>com.lowagie</groupId>
-			<artifactId>itext</artifactId>
-			<version>4.2.2</version>
-			<type>pom</type>
-		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/root -->
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>root</artifactId>
+    <version>7.0.0</version>
+    <type>pom</type>
+</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
-		<dependency>
-			<groupId>com.itextpdf</groupId>
-			<artifactId>itextpdf</artifactId>
-			<version>5.0.6</version>
-		</dependency>
+<!-- https://mvnrepository.com/artifact/com.itextpdf/html2pdf -->
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>html2pdf</artifactId>
+    <version>2.1.1</version>
+</dependency>
 
-		<dependency>
-			<groupId>com.itextpdf.tool</groupId>
-			<artifactId>xmlworker</artifactId>
-			<version>5.4.1</version>
-		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
@@ -244,6 +241,12 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 			<scope>runtime</scope>
+		</dependency>
+		
+			<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.20</version>
 		</dependency>
 
 	</dependencies>

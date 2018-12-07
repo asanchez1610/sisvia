@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.pe.sisvia.model.Conceptoasignado;
+import com.pe.sisvia.model.Rendicion;
 import com.pe.sisvia.model.Solicitudviatico;
 import com.pe.sisvia.model.vo.AsignacionRequestVo;
 
@@ -26,4 +27,10 @@ public interface ViaticoService {
 	
 	public void anularSolicitud(Solicitudviatico solicitud);
 	
+	public Map<String, Object> consultarMovimientos() throws IOException;
+	
+	public void generarReporte(String pathFileOutput,Long idSolicitud) throws Exception;
+	
+	public Rendicion asignarRendicion(Solicitudviatico solicitud , boolean isSolicitudRendicinEfectivo) throws Exception;
+
 }

@@ -15,10 +15,8 @@ public class Gasto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="GASTO_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GASTO_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
-	private long rendicionId;
+	private Long rendicionId;
 
 	@Temporal(TemporalType.DATE)
 	private Date fecregistrogasto;
@@ -26,26 +24,24 @@ public class Gasto implements Serializable {
 	private String tipogasto;
 
 	//bi-directional one-to-one association to Rendicion
-	@OneToOne
-	@JoinColumn(name="RENDICION_ID")
-	private Rendicion rendicion;
+
 
 	//bi-directional one-to-one association to Gastoefectivo
-	@OneToOne(mappedBy="gasto")
-	private Gastoefectivo gastoefectivo;
-
-	//bi-directional one-to-one association to Gastotarjeta
-	@OneToOne(mappedBy="gasto")
-	private Gastotarjeta gastotarjeta;
+//	@OneToOne(mappedBy="gasto")
+//	private Gastoefectivo gastoefectivo;
+//
+//	//bi-directional one-to-one association to Gastotarjeta
+//	@OneToOne(mappedBy="gasto")
+//	private Gastotarjeta gastotarjeta;
 
 	public Gasto() {
 	}
 
-	public long getRendicionId() {
+	public Long getRendicionId() {
 		return this.rendicionId;
 	}
 
-	public void setRendicionId(long rendicionId) {
+	public void setRendicionId(Long rendicionId) {
 		this.rendicionId = rendicionId;
 	}
 
@@ -64,29 +60,29 @@ public class Gasto implements Serializable {
 	public void setTipogasto(String tipogasto) {
 		this.tipogasto = tipogasto;
 	}
+//
+//	public Rendicion getRendicion() {
+//		return this.rendicion;
+//	}
+//
+//	public void setRendicion(Rendicion rendicion) {
+//		this.rendicion = rendicion;
+//	}
 
-	public Rendicion getRendicion() {
-		return this.rendicion;
-	}
-
-	public void setRendicion(Rendicion rendicion) {
-		this.rendicion = rendicion;
-	}
-
-	public Gastoefectivo getGastoefectivo() {
-		return this.gastoefectivo;
-	}
-
-	public void setGastoefectivo(Gastoefectivo gastoefectivo) {
-		this.gastoefectivo = gastoefectivo;
-	}
-
-	public Gastotarjeta getGastotarjeta() {
-		return this.gastotarjeta;
-	}
-
-	public void setGastotarjeta(Gastotarjeta gastotarjeta) {
-		this.gastotarjeta = gastotarjeta;
-	}
+//	public Gastoefectivo getGastoefectivo() {
+//		return this.gastoefectivo;
+//	}
+//
+//	public void setGastoefectivo(Gastoefectivo gastoefectivo) {
+//		this.gastoefectivo = gastoefectivo;
+//	}
+//
+//	public Gastotarjeta getGastotarjeta() {
+//		return this.gastotarjeta;
+//	}
+//
+//	public void setGastotarjeta(Gastotarjeta gastotarjeta) {
+//		this.gastotarjeta = gastotarjeta;
+//	}
 
 }

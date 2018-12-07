@@ -1,20 +1,17 @@
 package com.pe.sisvia.dao.impl;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
+import javax.management.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Repository;
 
 import com.pe.sisvia.dao.SolicitudViaticoDAO;
 import com.pe.sisvia.model.Solicitudviatico;
-import com.pe.sisvia.model.Tarjetacorporativa;
-import com.pe.sisvia.model.Tipocomision;
 import com.pe.sisvia.util.Constantes;
 
 @Repository
@@ -33,6 +30,8 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 		}
 		return solicitud;
 	}
+	
+	
 
 	public List<Solicitudviatico> listarSolicitudes(Solicitudviatico solicitud) {
 		String sql = "SELECT s FROM Solicitudviatico s WHERE 1=1 ";
@@ -49,6 +48,10 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 			sql+=" AND s.empleadoComisionado.area.centrocosto.nomcc = :ccosto  ";
 		}
 		
+		if(solicitud.getCodTipoComision() != null) {
+			sql+=" AND s.tipocomision.tipocomisionId = :tcomision  ";
+		}
+		
 		if(solicitud.getStrFechaInicio() != null) {
 			sql+=" AND s.fecinicio >= TO_DATE('"+solicitud.getStrFechaInicio()+"', 'yyyy-mm-dd')  ";
 		}
@@ -56,12 +59,52 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 		if(solicitud.getStrFechaFin() != null) {
 			sql+=" AND s.fecfin <= TO_DATE('"+solicitud.getStrFechaFin()+"', 'yyyy-mm-dd')  ";
 		}
+		
+		if(solicitud.getStrFechaAprobacion() != null) {
+			sql+=" AND s.fecautoriza = TO_DATE('"+solicitud.getStrFechaAprobacion()+"', 'yyyy-mm-dd')  ";
+		}
 
 		if(solicitud.getNombreCompleto() != null) {
 			sql+=" AND upper(s.empleadoComisionado.nombre || ' ' ||s.empleadoComisionado.apellido) like upper('%"+solicitud.getNombreCompleto()+"%') ";
 		}
 		
-		sql+=" AND s.estado = '"+Constantes.ESTADO_AUTHORIZED+"' ORDER BY s.solicitudviaticosId DESC ";
+		String estado = Constantes.ESTADO_AUTHORIZED;
+		String order = "solicitudviaticosId";
+		if(StringUtils.isNotBlank(solicitud.getEstado())) {
+			estado = solicitud.getEstado();
+			if(solicitud.getEstado().equals(Constantes.ESTADO_ASSIGNED)) {
+				order = "fecfin";
+				
+				if(solicitud.isRendido() && solicitud.isxRendir()) {
+					sql+=" AND s.estado in ("
+							+ "'"+Constantes.ESTADO_PENDIENTE_RENDICION+"',"
+							+ "'"+Constantes.ESTADO_RENDIDO_EFECTIVO+"') ";
+				}else if(solicitud.isRendido() && !solicitud.isxRendir()) {
+					sql+=" AND s.estado in ("
+							+ "'"+Constantes.ESTADO_RENDIDO_EFECTIVO+"') ";
+				}else if(!solicitud.isRendido() && solicitud.isxRendir()) {
+					sql+=" AND s.estado in ("
+							+ "'"+Constantes.ESTADO_PENDIENTE_RENDICION+"') ";	
+				}else if(!solicitud.isRendido() && !solicitud.isxRendir()) {
+					sql+=" AND s.estado in ('"+Constantes.ESTADO_ASSIGNED+"',"
+							+ "'"+Constantes.ESTADO_PENDIENTE_RENDICION+"',"
+							+ "'"+Constantes.ESTADO_RENDIDO_EFECTIVO+"') ";
+				}else {
+					sql+=" AND s.estado in ('"+Constantes.ESTADO_ASSIGNED+"',"
+							+ "'"+Constantes.ESTADO_PENDIENTE_RENDICION+"',"
+							+ "'"+Constantes.ESTADO_RENDIDO_EFECTIVO+"') ";
+				}
+				
+				sql+=" AND s.fecfin < sysdate ORDER BY s."+order+" DESC ";
+
+			}else {
+				sql+=" AND s.estado = '"+estado+"' ORDER BY s."+order+" DESC ";
+			}
+		}else {
+			sql+=" AND s.estado = '"+estado+"' ORDER BY s."+order+" DESC ";
+		}
+		
+		
 		TypedQuery<Solicitudviatico> query = em.createQuery(sql, Solicitudviatico.class);	
 		
 		if( solicitud.getSolicitudviaticosId() != null ) {
@@ -75,7 +118,10 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 		if( solicitud.getCodCentroCosto() != null ) {
 			query.setParameter("ccosto", solicitud.getCodCentroCosto());
 		}
-		
+	
+		if( solicitud.getCodTipoComision() != null ) {
+			query.setParameter("tcomision", new Long(solicitud.getCodTipoComision()));
+		}
 
 		List<Solicitudviatico> list = query.getResultList();
 		
@@ -88,6 +134,14 @@ public class SolicitudViaticoDAOImpl implements SolicitudViaticoDAO {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+
+
+
+	public void actualizarEstado(Long id,String estado) {
+		// TODO Auto-generated method stub
+		javax.persistence.Query q = em.createNativeQuery("UPDATE SOLICITUDVIATICOS s SET s.ESTADO = '"+estado+"' where s.SOLICITUDVIATICOS_ID="+id);
+		q.executeUpdate();
 	}
 
 }

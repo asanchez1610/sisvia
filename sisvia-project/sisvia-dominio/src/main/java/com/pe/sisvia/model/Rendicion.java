@@ -19,7 +19,7 @@ public class Rendicion implements Serializable {
 	@SequenceGenerator(name="RENDICION_RENDICIONID_GENERATOR", sequenceName="SQ_AUTO_INCREMENT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RENDICION_RENDICIONID_GENERATOR")
 	@Column(name="RENDICION_ID")
-	private long rendicionId;
+	private Long rendicionId;
 
 	private BigDecimal codrendicion;
 
@@ -36,22 +36,32 @@ public class Rendicion implements Serializable {
 	private double montototal;
 
 	//bi-directional one-to-one association to Gasto
-	@OneToOne(mappedBy="rendicion")
-	private Gasto gasto;
+//	@OneToOne(mappedBy="rendicion")
+//	private Gasto gasto;
 
 	//bi-directional many-to-one association to Viatico
-	@ManyToOne
-	@JoinColumn(name="VIATICO_ID")
-	private Viatico viatico;
+//	@ManyToOne
+//	@JoinColumn(name="VIATICO_ID")
+//	private Viatico viatico;
+	@Column(name = "VIATICO_ID")
+	private Long viaticoId;
+	
+	public Long getViaticoId() {
+		return viaticoId;
+	}
+
+	public void setViaticoId(Long viaticoId) {
+		this.viaticoId = viaticoId;
+	}
 
 	public Rendicion() {
 	}
 
-	public long getRendicionId() {
+	public Long getRendicionId() {
 		return this.rendicionId;
 	}
 
-	public void setRendicionId(long rendicionId) {
+	public void setRendicionId(Long rendicionId) {
 		this.rendicionId = rendicionId;
 	}
 
@@ -103,20 +113,20 @@ public class Rendicion implements Serializable {
 		this.montototal = montototal;
 	}
 
-	public Gasto getGasto() {
-		return this.gasto;
-	}
+//	public Gasto getGasto() {
+//		return this.gasto;
+//	}
+//
+//	public void setGasto(Gasto gasto) {
+//		this.gasto = gasto;
+//	}
 
-	public void setGasto(Gasto gasto) {
-		this.gasto = gasto;
-	}
-
-	public Viatico getViatico() {
-		return this.viatico;
-	}
-
-	public void setViatico(Viatico viatico) {
-		this.viatico = viatico;
-	}
+//	public Viatico getViatico() {
+//		return this.viatico;
+//	}
+//
+//	public void setViatico(Viatico viatico) {
+//		this.viatico = viatico;
+//	}
 
 }

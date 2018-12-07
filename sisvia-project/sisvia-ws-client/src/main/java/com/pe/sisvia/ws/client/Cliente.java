@@ -43,7 +43,18 @@ public class Cliente {
 		return map;
 	}
 	
+	public Map<String, Object> consultarMovimientos() throws IOException{
+		OkHttpClient client = new OkHttpClient();
 
-	
+		Request request = new Request.Builder()
+		  .url(Constantes.urlBase+"/external/api/ConsultarMovimientos_output.json")
+		  .get()
+		  .addHeader("Cache-Control", "no-cache")
+		  .build();
+		Response response = client.newCall(request).execute();
+		Gson gson = new Gson();
+		Map map = gson.fromJson(response.body().string(), Map.class);
+		return map;
+	}
 	
 }

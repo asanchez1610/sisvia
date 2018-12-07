@@ -12,4 +12,6 @@ public interface SolicitudViaticoDAO {
 	
 	public Solicitudviatico obtenerId(Long id);
 
+	public void actualizarEstado(Long id,String estado);
+	
 }

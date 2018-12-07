@@ -38,6 +38,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	public void addResourceHandlers(final ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/external/**").addResourceLocations("/mockup/external/");
+		registry.addResourceHandler("/reports/**").addResourceLocations("/reports/");
 	}
 	
 	@Bean

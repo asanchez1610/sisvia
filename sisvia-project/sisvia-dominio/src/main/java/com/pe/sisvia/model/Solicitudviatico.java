@@ -285,6 +285,18 @@ public class Solicitudviatico implements Serializable {
 
 	@Transient
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String strFechaAprobacion;
+
+	public String getStrFechaAprobacion() {
+		return strFechaAprobacion;
+	}
+
+	public void setStrFechaAprobacion(String strFechaAprobacion) {
+		this.strFechaAprobacion = strFechaAprobacion;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private String numDni;
 
 	public String getNumDni() {
@@ -319,4 +331,49 @@ public class Solicitudviatico implements Serializable {
 		this.codCentroCosto = codCentroCosto;
 	}
 
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String codTipoComision;
+
+	public String getCodTipoComision() {
+		return codTipoComision;
+	}
+
+	public void setCodTipoComision(String codTipoComision) {
+		this.codTipoComision = codTipoComision;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private boolean xRendir = true;
+	public boolean isxRendir() {
+		return xRendir;
+	}
+	public void setxRendir(boolean xRendir) {
+		this.xRendir = xRendir;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private boolean rendido = true;
+	public boolean isRendido() {
+		return rendido;
+	}
+	public void setRendido(boolean rendido) {
+		this.rendido = rendido;
+	}
+
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private Gastoefectivo gastoEfectivo;
+
+	public Gastoefectivo getGastoEfectivo() {
+		return gastoEfectivo;
+	}
+
+	public void setGastoEfectivo(Gastoefectivo gastoEfectivo) {
+		this.gastoEfectivo = gastoEfectivo;
+	}
+
+	
 }
